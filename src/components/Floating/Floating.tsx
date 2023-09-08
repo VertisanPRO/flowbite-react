@@ -32,7 +32,7 @@ export interface FlowbiteFloatingArrowTheme {
 
 export type FloatingStyle = 'dark' | 'light' | 'auto';
 
-export interface FloatingProps extends PropsWithChildren, Omit<ComponentProps<'div'>, 'content' | 'style'> {
+export interface FloatingProps extends PropsWithChildren<unknown>, Omit<ComponentProps<'div'>, 'content' | 'style'> {
   animation?: false | `duration-${number}`;
   arrow?: boolean;
   content: ReactNode;

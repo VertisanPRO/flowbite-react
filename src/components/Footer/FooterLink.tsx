@@ -9,7 +9,7 @@ export interface FlowbiteFooterLinkTheme {
   href: string;
 }
 
-export interface FooterLinkProps extends PropsWithChildren, ComponentProps<'a'> {
+export interface FooterLinkProps extends PropsWithChildren<unknown>, ComponentProps<'a'> {
   as?: ElementType;
   href: string;
   theme?: DeepPartial<FlowbiteFooterLinkTheme>;

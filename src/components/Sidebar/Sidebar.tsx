@@ -29,7 +29,7 @@ export interface FlowbiteSidebarTheme {
   logo: FlowbiteSidebarLogoTheme;
 }
 
-export interface SidebarProps extends PropsWithChildren, ComponentProps<'div'> {
+export interface SidebarProps extends PropsWithChildren<unknown>, ComponentProps<'div'> {
   as?: ElementType;
   collapseBehavior?: 'collapse' | 'hide';
   collapsed?: boolean;

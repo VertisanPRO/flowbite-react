@@ -11,7 +11,7 @@ export interface FlowbiteTableRowTheme {
   striped: string;
 }
 
-export interface TableRowProps extends PropsWithChildren, ComponentProps<'tr'> {
+export interface TableRowProps extends PropsWithChildren<unknown>, ComponentProps<'tr'> {
   theme?: DeepPartial<FlowbiteTableRowTheme>;
 }
 

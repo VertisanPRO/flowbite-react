@@ -10,7 +10,7 @@ export interface FlowbiteSidebarCTATheme {
   color: FlowbiteSidebarCTAColors;
 }
 
-export interface SidebarCTAProps extends PropsWithChildren, Omit<ComponentProps<'div'>, 'color'> {
+export interface SidebarCTAProps extends PropsWithChildren<unknown>, Omit<ComponentProps<'div'>, 'color'> {
   color?: keyof FlowbiteSidebarCTAColors;
   theme?: DeepPartial<FlowbiteSidebarCTATheme>;
 }

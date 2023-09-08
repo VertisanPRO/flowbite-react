@@ -11,7 +11,7 @@ export interface FlowbiteFooterLinkGroupTheme {
   col: string;
 }
 
-export interface FooterLinkGroupProps extends PropsWithChildren, ComponentProps<'ul'> {
+export interface FooterLinkGroupProps extends PropsWithChildren<unknown>, ComponentProps<'ul'> {
   col?: boolean;
   theme?: DeepPartial<FlowbiteFooterLinkGroupTheme>;
 }

@@ -14,7 +14,7 @@ export interface FlowbiteListGroupItemTheme {
   };
 }
 
-export interface ListGroupItemProps extends PropsWithChildren {
+export interface ListGroupItemProps extends PropsWithChildren<unknown> {
   active?: boolean;
   disabled?: boolean;
   href?: string;

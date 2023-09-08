@@ -145,7 +145,7 @@ describe('Components / Button', () => {
       });
 
       it('should render component defined in `as` prop even though `href` is defined', () => {
-        const CustomComponent = ({ children }: PropsWithChildren) => {
+        const CustomComponent = ({ children }: PropsWithChildren<unknown>) => {
           return <li>{children}</li>;
         };
 

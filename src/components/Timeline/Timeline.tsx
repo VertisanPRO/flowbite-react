@@ -22,7 +22,7 @@ export interface FlowbiteTimelineTheme {
   item: FlowbiteTimelineItemTheme;
 }
 
-export interface TimelineProps extends PropsWithChildren, ComponentProps<'ol'> {
+export interface TimelineProps extends PropsWithChildren<unknown>, ComponentProps<'ol'> {
   horizontal?: boolean;
   theme?: DeepPartial<FlowbiteTimelineTheme>;
 }

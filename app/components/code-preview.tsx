@@ -17,7 +17,7 @@ const reactElementToJSXStringOptions: Options = {
   sortProps: true,
 };
 
-interface CodePreviewProps extends PropsWithChildren, ComponentProps<'div'> {
+interface CodePreviewProps extends PropsWithChildren<unknown>, ComponentProps<'div'> {
   code?: string;
   functionBody?: string[];
   githubPage?: string;

@@ -27,7 +27,7 @@ export interface FlowbiteTableRootTheme {
   wrapper: string;
 }
 
-export interface TableProps extends PropsWithChildren, ComponentProps<'table'>, TableContextType {
+export interface TableProps extends PropsWithChildren<unknown>, ComponentProps<'table'>, TableContextType {
   theme?: DeepPartial<FlowbiteTableTheme>;
 }
 

@@ -15,7 +15,7 @@ export interface FlowbiteListGroupRootTheme {
   base: string;
 }
 
-export interface ListGroupProps extends PropsWithChildren, ComponentProps<'ul'> {
+export interface ListGroupProps extends PropsWithChildren<unknown>, ComponentProps<'ul'> {
   theme?: DeepPartial<FlowbiteListGroupTheme>;
 }
 

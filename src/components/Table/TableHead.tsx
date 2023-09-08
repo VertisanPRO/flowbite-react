@@ -10,7 +10,7 @@ export interface FlowbiteTableHeadTheme {
   cell: FlowbiteTableHeadCellTheme;
 }
 
-export interface TableHeadProps extends PropsWithChildren, ComponentProps<'thead'> {
+export interface TableHeadProps extends PropsWithChildren<unknown>, ComponentProps<'thead'> {
   theme?: DeepPartial<FlowbiteTableHeadTheme>;
 }
 

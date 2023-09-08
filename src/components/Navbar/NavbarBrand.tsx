@@ -8,7 +8,7 @@ export interface FlowbiteNavbarBrandTheme {
   base: string;
 }
 
-export interface NavbarBrandProps extends PropsWithChildren, ComponentProps<'a'>, Record<string, unknown> {
+export interface NavbarBrandProps extends PropsWithChildren<unknown>, ComponentProps<'a'>, Record<string, unknown> {
   as?: ElementType;
   href?: string;
   theme?: DeepPartial<FlowbiteNavbarBrandTheme>;

@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 
-interface ComponentCardProps extends PropsWithChildren, ComponentProps<'div'> {
+interface ComponentCardProps extends PropsWithChildren<unknown>, ComponentProps<'div'> {
   link: string;
   name?: string;
   image?: string;

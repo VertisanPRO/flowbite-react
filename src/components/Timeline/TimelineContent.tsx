@@ -17,7 +17,7 @@ export interface FlowbiteTimelineContentTheme
   };
 }
 
-export interface TimelineContentProps extends PropsWithChildren, ComponentProps<'div'> {
+export interface TimelineContentProps extends PropsWithChildren<unknown>, ComponentProps<'div'> {
   theme?: DeepPartial<FlowbiteTimelineContentTheme>;
 }
 

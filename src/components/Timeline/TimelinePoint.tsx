@@ -21,7 +21,7 @@ export interface FlowbiteTimelinePointTheme {
   vertical: string;
 }
 
-export interface TimelnePointProps extends PropsWithChildren, ComponentProps<'div'> {
+export interface TimelnePointProps extends PropsWithChildren<unknown>, ComponentProps<'div'> {
   icon?: FC<ComponentProps<'svg'>>;
   theme?: DeepPartial<FlowbiteTimelinePointTheme>;
 }

@@ -8,7 +8,7 @@ export interface FlowbiteTableCellTheme {
   base: string;
 }
 
-export interface TableCellProps extends PropsWithChildren, ComponentProps<'td'> {
+export interface TableCellProps extends PropsWithChildren<unknown>, ComponentProps<'td'> {
   theme?: DeepPartial<FlowbiteTableCellTheme>;
 }
 

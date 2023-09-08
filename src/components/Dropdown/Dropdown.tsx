@@ -43,7 +43,7 @@ export interface FlowbiteDropdownTheme {
 }
 
 export interface DropdownProps
-  extends PropsWithChildren,
+  extends PropsWithChildren<unknown>,
     Pick<FloatingProps, 'placement' | 'trigger'>,
     Omit<ButtonProps, 'theme'> {
   arrowIcon?: boolean;

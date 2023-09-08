@@ -8,7 +8,7 @@ export interface FlowbiteTimelineTitleTheme {
   title: string;
 }
 
-export interface TimelineTitleProps extends PropsWithChildren, ComponentProps<'h1'> {
+export interface TimelineTitleProps extends PropsWithChildren<unknown>, ComponentProps<'h1'> {
   as?: FlowbiteHeadingLevel;
   theme?: DeepPartial<FlowbiteTimelineTitleTheme>;
 }

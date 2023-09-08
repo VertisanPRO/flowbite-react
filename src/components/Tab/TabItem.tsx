@@ -1,6 +1,6 @@
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react';
 
-export interface TabItemProps extends PropsWithChildren, Omit<ComponentProps<'div'>, 'title'> {
+export interface TabItemProps extends PropsWithChildren<unknown>, Omit<ComponentProps<'div'>, 'title'> {
   active?: boolean;
   disabled?: boolean;
   icon?: FC<ComponentProps<'svg'>>;

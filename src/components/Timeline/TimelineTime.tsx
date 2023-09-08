@@ -8,7 +8,7 @@ export interface FlowbiteTimelineTimeTheme {
   time: string;
 }
 
-export interface TimelineTimeProps extends PropsWithChildren, ComponentProps<'time'> {
+export interface TimelineTimeProps extends PropsWithChildren<unknown>, ComponentProps<'time'> {
   theme?: DeepPartial<FlowbiteTimelineTimeTheme>;
 }
 

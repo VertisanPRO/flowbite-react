@@ -13,7 +13,7 @@ export interface FlowbiteSidebarLogoTheme {
   img: string;
 }
 
-export interface SidebarLogoProps extends PropsWithChildren, ComponentProps<'a'> {
+export interface SidebarLogoProps extends PropsWithChildren<unknown>, ComponentProps<'a'> {
   href: string;
   img: string;
   imgAlt?: string;

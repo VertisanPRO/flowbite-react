@@ -170,7 +170,7 @@ describe('Components / Dropdown', () => {
     it('should override Dropdownn.Item base component when using `as` prop', async () => {
       const user = userEvent.setup();
 
-      const CustomBaseItem = ({ children }: PropsWithChildren) => {
+      const CustomBaseItem = ({ children }: PropsWithChildren<unknown>) => {
         return <a href="#">{children}</a>;
       };
 

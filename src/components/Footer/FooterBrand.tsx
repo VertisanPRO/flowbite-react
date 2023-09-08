@@ -10,7 +10,7 @@ export interface FlowbiteFooterBrandTheme {
   span: string;
 }
 
-export interface FooterBrandProps extends PropsWithChildren {
+export interface FooterBrandProps extends PropsWithChildren<unknown> {
   alt?: string;
   className?: string;
   href?: string;

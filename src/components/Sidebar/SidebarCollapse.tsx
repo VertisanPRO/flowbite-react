@@ -27,7 +27,7 @@ export interface FlowbiteSidebarCollapseTheme {
 }
 
 export interface SidebarCollapseProps
-  extends PropsWithChildren,
+  extends PropsWithChildren<unknown>,
     Pick<SidebarItemProps, 'active' | 'as' | 'href' | 'icon' | 'label' | 'labelColor'>,
     ComponentProps<'button'> {
   onClick?: ComponentProps<'button'>['onClick'];

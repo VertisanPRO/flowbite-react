@@ -10,7 +10,7 @@ export interface FlowbiteFooterCopyrightTheme {
   span: string;
 }
 
-export interface CopyrightProps extends PropsWithChildren, ComponentProps<'div'> {
+export interface CopyrightProps extends PropsWithChildren<unknown>, ComponentProps<'div'> {
   by: string;
   href?: string;
   theme?: DeepPartial<FlowbiteFooterCopyrightTheme>;

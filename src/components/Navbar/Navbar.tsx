@@ -32,7 +32,7 @@ export interface FlowbiteNavbarRootTheme {
   };
 }
 
-export interface NavbarComponentProps extends PropsWithChildren, ComponentProps<'nav'> {
+export interface NavbarComponentProps extends PropsWithChildren<unknown>, ComponentProps<'nav'> {
   menuOpen?: boolean;
   fluid?: boolean;
   rounded?: boolean;

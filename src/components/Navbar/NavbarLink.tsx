@@ -10,7 +10,7 @@ export interface FlowbiteNavbarLinkTheme {
   disabled: FlowbiteBoolean;
 }
 
-export interface NavbarLinkProps extends PropsWithChildren, ComponentProps<'a'>, Record<string, unknown> {
+export interface NavbarLinkProps extends PropsWithChildren<unknown>, ComponentProps<'a'>, Record<string, unknown> {
   active?: boolean;
   as?: ElementType;
   disabled?: boolean;

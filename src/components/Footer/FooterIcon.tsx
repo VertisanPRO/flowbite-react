@@ -9,7 +9,7 @@ export interface FlowbiteFooterIconTheme {
   size: string;
 }
 
-export interface FooterIconProps extends PropsWithChildren {
+export interface FooterIconProps extends PropsWithChildren<unknown> {
   ariaLabel?: string;
   className?: string;
   href?: string;

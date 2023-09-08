@@ -38,7 +38,7 @@ export interface FlowbitePaginationNavigationTheme {
   icon: string;
 }
 
-export interface PaginationProps extends PropsWithChildren, ComponentProps<'nav'> {
+export interface PaginationProps extends PropsWithChildren<unknown>, ComponentProps<'nav'> {
   currentPage: number;
   layout?: 'navigation' | 'pagination' | 'table';
   nextLabel?: string;

@@ -27,7 +27,7 @@ export interface FlowbiteSidebarItemTheme {
 }
 
 export interface SidebarItemProps
-  extends PropsWithChildren,
+  extends PropsWithChildren<unknown>,
     Omit<ComponentProps<'div'>, 'ref'>,
     Record<string, unknown> {
   active?: boolean;

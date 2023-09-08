@@ -14,7 +14,7 @@ export interface FlowbiteRatingAdvancedTheme {
   };
 }
 
-export interface RatingAdvancedProps extends PropsWithChildren, ComponentProps<'div'> {
+export interface RatingAdvancedProps extends PropsWithChildren<unknown>, ComponentProps<'div'> {
   percentFilled?: number;
   theme?: DeepPartial<FlowbiteRatingAdvancedTheme>;
 }

@@ -33,7 +33,7 @@ export interface SelectSizes extends Pick<FlowbiteSizes, 'sm' | 'md' | 'lg'> {
   [key: string]: string;
 }
 
-export interface SelectProps extends PropsWithChildren, Omit<ComponentProps<'select'>, 'color' | 'ref'> {
+export interface SelectProps extends PropsWithChildren<unknown>, Omit<ComponentProps<'select'>, 'color' | 'ref'> {
   addon?: ReactNode;
   color?: keyof SelectColors;
   helperText?: ReactNode;

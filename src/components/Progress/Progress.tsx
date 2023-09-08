@@ -23,7 +23,7 @@ export interface ProgressSizes extends Pick<FlowbiteSizes, 'sm' | 'md' | 'lg' | 
   [key: string]: string;
 }
 
-export interface ProgressProps extends PropsWithChildren, ComponentProps<'div'> {
+export interface ProgressProps extends PropsWithChildren<unknown>, ComponentProps<'div'> {
   labelProgress?: boolean;
   labelText?: boolean;
   progress: number;

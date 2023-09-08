@@ -20,7 +20,7 @@ export interface PositionInButtonGroup {
 
 export interface ButtonGroupProps
   extends ComponentProps<'div'>,
-    PropsWithChildren,
+    PropsWithChildren<unknown>,
     Pick<ButtonProps, 'outline' | 'pill'> {
   theme?: DeepPartial<FlowbiteButtonGroupTheme>;
 }
