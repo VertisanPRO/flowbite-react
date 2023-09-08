@@ -1,10 +1,11 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
-import { useId } from 'react';
+import { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial, FlowbiteBoolean } from '../../';
 import { useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { useSidebarContext } from './SidebarContext';
+import { nanoid } from 'nanoid';
 
 export interface FlowbiteSidebarLogoTheme {
   base: string;
@@ -28,7 +29,7 @@ const SidebarLogo: FC<SidebarLogoProps> = ({
   theme: customTheme = {},
   ...props
 }) => {
-  const id = useId();
+  const id = useMemo(() => nanoid(), []);
   const { isCollapsed } = useSidebarContext();
   const theme = mergeDeep(useTheme().theme.sidebar.logo, customTheme);
 

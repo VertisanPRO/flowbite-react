@@ -1,11 +1,12 @@
 import type { ComponentProps, ElementType, FC, PropsWithChildren, ReactNode } from 'react';
-import { forwardRef, useId } from 'react';
+import { forwardRef, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial, FlowbiteColors } from '../../';
 import { Badge, Tooltip, useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { useSidebarContext } from './SidebarContext';
 import { useSidebarItemContext } from './SidebarItemContext';
+import { nanoid } from 'nanoid';
 
 export interface FlowbiteSidebarItemTheme {
   active: string;
@@ -89,7 +90,7 @@ export const SidebarItem = forwardRef<Element, SidebarItemProps>(
     },
     ref,
   ) => {
-    const id = useId();
+    const id = useMemo(() => nanoid(), []);
     const { isCollapsed } = useSidebarContext();
     const { isInsideCollapse } = useSidebarItemContext();
     const theme = mergeDeep(useTheme().theme.sidebar.item, customTheme);

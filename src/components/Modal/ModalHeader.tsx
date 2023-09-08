@@ -1,10 +1,11 @@
-import { useId, useLayoutEffect, type ComponentProps, type ElementType, type FC, type PropsWithChildren } from 'react';
+import { useMemo, useLayoutEffect, type ComponentProps, type ElementType, type FC, type PropsWithChildren } from 'react';
 import { HiOutlineX } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial } from '../../';
 import { useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { useModalContext } from './ModalContext';
+import { nanoid } from 'nanoid';
 
 export interface FlowbiteModalHeaderTheme {
   base: string;
@@ -29,7 +30,7 @@ export const ModalHeader: FC<ModalHeaderProps> = ({
   id,
   ...props
 }) => {
-  const innerHeaderId = useId();
+  const innerHeaderId = useMemo(() => nanoid(), []);
   const headerId = id || innerHeaderId;
   const theme = mergeDeep(useTheme().theme.modal.header, customTheme);
   const { popup, onClose, setHeaderId } = useModalContext();

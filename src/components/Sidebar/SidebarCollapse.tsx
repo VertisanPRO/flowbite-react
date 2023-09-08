@@ -1,5 +1,5 @@
 import type { ComponentProps, FC, PropsWithChildren, ReactElement } from 'react';
-import { useEffect, useId, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { HiChevronDown } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial, FlowbiteBoolean } from '../../';
@@ -8,6 +8,7 @@ import { mergeDeep } from '../../helpers/merge-deep';
 import { useSidebarContext } from './SidebarContext';
 import type { SidebarItemProps } from './SidebarItem';
 import { SidebarItemContext } from './SidebarItemContext';
+import { nanoid } from 'nanoid';
 
 export interface FlowbiteSidebarCollapseTheme {
   button: string;
@@ -47,7 +48,7 @@ export const SidebarCollapse: FC<SidebarCollapseProps> = ({
   theme: customTheme = {},
   ...props
 }) => {
-  const id = useId();
+  const id = useMemo(() => nanoid(), []);
   const { isCollapsed } = useSidebarContext();
   const [isOpen, setOpen] = useState(open);
   const theme = mergeDeep(useTheme().theme.sidebar.collapse, customTheme);

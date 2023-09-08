@@ -1,9 +1,10 @@
 import type { ComponentProps, FC, KeyboardEvent, MouseEvent } from 'react';
-import { useId } from 'react';
+import { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial, FlowbiteBoolean, FlowbiteColors } from '../../';
 import { useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
+import { nanoid } from 'nanoid';
 
 export interface FlowbiteToggleSwitchTheme {
   root: FlowbiteToggleSwitchRootTheme;
@@ -42,7 +43,7 @@ export const ToggleSwitch: FC<ToggleSwitchProps> = ({
   theme: customTheme = {},
   ...props
 }) => {
-  const id = useId();
+  const id = useMemo(() => nanoid(), []);
   const theme = mergeDeep(useTheme().theme.toggleSwitch, customTheme);
 
   const toggle = (): void => onChange(!checked);
