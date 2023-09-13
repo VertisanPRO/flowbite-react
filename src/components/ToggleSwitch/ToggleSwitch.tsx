@@ -1,10 +1,10 @@
+import { nanoid } from 'nanoid';
 import type { ComponentProps, FC, KeyboardEvent, MouseEvent } from 'react';
 import { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial, FlowbiteBoolean, FlowbiteColors } from '../../';
 import { useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
-import { nanoid } from 'nanoid';
 
 export interface FlowbiteToggleSwitchTheme {
   root: FlowbiteToggleSwitchRootTheme;

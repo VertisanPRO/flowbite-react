@@ -1,3 +1,4 @@
+import { nanoid } from 'nanoid';
 import type { ComponentProps, ElementType, FC, PropsWithChildren, ReactNode } from 'react';
 import { forwardRef, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
@@ -6,7 +7,6 @@ import { Badge, Tooltip, useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { useSidebarContext } from './SidebarContext';
 import { useSidebarItemContext } from './SidebarItemContext';
-import { nanoid } from 'nanoid';
 
 export interface FlowbiteSidebarItemTheme {
   active: string;
@@ -28,8 +28,8 @@ export interface FlowbiteSidebarItemTheme {
 
 export interface SidebarItemProps
   extends PropsWithChildren<unknown>,
-  Omit<ComponentProps<'div'>, 'ref'>,
-  Record<string, unknown> {
+    Omit<ComponentProps<'div'>, 'ref'>,
+    Record<string, unknown> {
   active?: boolean;
   as?: ElementType;
   href?: string;

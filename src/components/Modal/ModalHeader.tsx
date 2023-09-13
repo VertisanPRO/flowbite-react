@@ -1,11 +1,18 @@
-import { useMemo, useLayoutEffect, type ComponentProps, type ElementType, type FC, type PropsWithChildren } from 'react';
+import { nanoid } from 'nanoid';
+import {
+  useLayoutEffect,
+  useMemo,
+  type ComponentProps,
+  type ElementType,
+  type FC,
+  type PropsWithChildren,
+} from 'react';
 import { HiOutlineX } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial } from '../../';
 import { useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { useModalContext } from './ModalContext';
-import { nanoid } from 'nanoid';
 
 export interface FlowbiteModalHeaderTheme {
   base: string;

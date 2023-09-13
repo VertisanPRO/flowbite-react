@@ -1,10 +1,10 @@
+import { nanoid } from 'nanoid';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial, FlowbiteColors, FlowbiteSizes } from '../../';
 import { useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
-import { nanoid } from 'nanoid';
 
 export interface FlowbiteProgressTheme {
   base: string;

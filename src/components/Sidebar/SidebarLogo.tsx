@@ -1,3 +1,4 @@
+import { nanoid } from 'nanoid';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
@@ -5,7 +6,6 @@ import type { DeepPartial, FlowbiteBoolean } from '../../';
 import { useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { useSidebarContext } from './SidebarContext';
-import { nanoid } from 'nanoid';
 
 export interface FlowbiteSidebarLogoTheme {
   base: string;

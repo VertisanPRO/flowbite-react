@@ -1,3 +1,4 @@
+import { nanoid } from 'nanoid';
 import type { ComponentProps, FC, PropsWithChildren, ReactElement } from 'react';
 import { useEffect, useMemo, useState } from 'react';
 import { HiChevronDown } from 'react-icons/hi';
@@ -8,7 +9,6 @@ import { mergeDeep } from '../../helpers/merge-deep';
 import { useSidebarContext } from './SidebarContext';
 import type { SidebarItemProps } from './SidebarItem';
 import { SidebarItemContext } from './SidebarItemContext';
-import { nanoid } from 'nanoid';
 
 export interface FlowbiteSidebarCollapseTheme {
   button: string;

@@ -1,3 +1,4 @@
+import { nanoid } from 'nanoid';
 import type { ComponentProps, ForwardedRef, KeyboardEvent, PropsWithChildren, ReactElement } from 'react';
 import { Children, forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
@@ -6,7 +7,6 @@ import { useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
 import type { TabItemProps } from './TabItem';
 import { TabItem } from './TabItem';
-import { nanoid } from 'nanoid';
 
 export interface FlowbiteTabTheme {
   base: string;
