@@ -1,6 +1,5 @@
-import React from 'react';
 import type { FC, PropsWithChildren } from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import type { AccordionProps } from './Accordion';
 import { AccordionPanelContext } from './AccordionPanelContext';
 
@@ -15,10 +14,10 @@ export const AccordionPanel: FC<AccordionPanelProps> = ({ children, ...props }) 
 
   const provider = alwaysOpen
     ? {
-      ...props,
-      isOpen,
-      setOpen: () => setOpen(!isOpen),
-    }
+        ...props,
+        isOpen,
+        setOpen: () => setOpen(!isOpen),
+      }
     : props;
 
   return <AccordionPanelContext.Provider value={provider}>{children}</AccordionPanelContext.Provider>;

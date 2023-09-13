@@ -1,6 +1,5 @@
-import React from 'react';
 import type { ComponentPropsWithoutRef, ElementType, ForwardedRef } from 'react';
-import { type ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 import type {
   DeepPartial,

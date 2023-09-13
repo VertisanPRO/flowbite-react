@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import type { PropsWithChildren } from 'react';
+import React from 'react';
 import { AiOutlineLoading } from 'react-icons/ai';
 import { describe, expect, it, vi } from 'vitest';
 import { Flowbite } from '../../';

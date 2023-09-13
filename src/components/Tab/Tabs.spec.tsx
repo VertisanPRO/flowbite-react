@@ -1,8 +1,7 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import type { FC } from 'react';
-import { createRef, forwardRef } from 'react';
+import React, { createRef, forwardRef } from 'react';
 import { act } from 'react-dom/test-utils';
 import { HiAdjustments, HiClipboardList, HiUserCircle } from 'react-icons/hi';
 import { MdDashboard } from 'react-icons/md';

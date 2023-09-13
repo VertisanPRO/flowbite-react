@@ -1,4 +1,3 @@
-import React from 'react';
 import type { ExtendedRefs, useInteractions } from '@floating-ui/react';
 import { FloatingFocusManager, FloatingList, useListNavigation, useTypeahead } from '@floating-ui/react';
 import type {
@@ -13,7 +12,7 @@ import type {
   RefCallback,
   SetStateAction,
 } from 'react';
-import { cloneElement, createContext, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { cloneElement, createContext, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { HiOutlineChevronDown, HiOutlineChevronLeft, HiOutlineChevronRight, HiOutlineChevronUp } from 'react-icons/hi';
 import type { ButtonProps, DeepPartial } from '../../';
 import { Button, useTheme } from '../../';
@@ -31,8 +30,8 @@ import { useBaseFLoating, useFloatingInteractions } from '../../helpers/use-floa
 
 export interface FlowbiteDropdownFloatingTheme
   extends FlowbiteFloatingTheme,
-  FlowbiteDropdownDividerTheme,
-  FlowbiteDropdownHeaderTheme {
+    FlowbiteDropdownDividerTheme,
+    FlowbiteDropdownHeaderTheme {
   item: FlowbiteDropdownItemTheme;
 }
 
@@ -45,8 +44,8 @@ export interface FlowbiteDropdownTheme {
 
 export interface DropdownProps
   extends PropsWithChildren<unknown>,
-  Pick<FloatingProps, 'placement' | 'trigger'>,
-  Omit<ButtonProps, 'theme'> {
+    Pick<FloatingProps, 'placement' | 'trigger'>,
+    Omit<ButtonProps, 'theme'> {
   arrowIcon?: boolean;
   dismissOnClick?: boolean;
   floatingArrow?: boolean;

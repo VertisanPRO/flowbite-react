@@ -1,6 +1,5 @@
-import React from 'react';
 import type { ComponentProps, FC, PropsWithChildren, ReactElement, ReactNode } from 'react';
-import { Children, cloneElement, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { Children, cloneElement, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';
 import ScrollContainer from 'react-indiana-drag-scroll';
 import { twMerge } from 'tailwind-merge';

@@ -1,7 +1,7 @@
-import React from 'react';
 import { action } from '@storybook/addon-actions';
 import type { Meta, Story } from '@storybook/react';
 import Link from 'next/link';
+import React from 'react';
 import { HiOutlineExclamationCircle } from 'react-icons/hi';
 import { Button, Checkbox, Label, TextInput } from '../../';
 import type { ModalProps } from './Modal';

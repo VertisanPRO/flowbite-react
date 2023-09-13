@@ -1,7 +1,6 @@
-import React from 'react';
 import { useListItem } from '@floating-ui/react';
 import type { ComponentProps, ComponentPropsWithoutRef, ElementType, FC, RefCallback } from 'react';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial } from '../../';
 import { useTheme } from '../../';

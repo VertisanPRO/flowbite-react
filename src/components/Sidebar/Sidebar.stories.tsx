@@ -1,5 +1,5 @@
-import React from 'react';
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
+import React from 'react';
 import { BiBuoy } from 'react-icons/bi';
 import { HiArrowSmRight, HiChartPie, HiInbox, HiShoppingBag, HiTable, HiUser, HiViewBoards } from 'react-icons/hi';
 import { Badge, Button } from '../../';

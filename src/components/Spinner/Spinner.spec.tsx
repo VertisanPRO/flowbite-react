@@ -1,6 +1,6 @@
-import React from 'react';
 import type { RenderResult } from '@testing-library/react';
 import { render } from '@testing-library/react';
+import React from 'react';
 import { describe, expect, it } from 'vitest';
 import { Flowbite } from '../../';
 import { Spinner } from './Spinner';

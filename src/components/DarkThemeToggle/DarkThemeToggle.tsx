@@ -1,6 +1,5 @@
-import React from 'react';
 import type { ComponentProps, FC } from 'react';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { HiMoon, HiSun } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial } from '../../';

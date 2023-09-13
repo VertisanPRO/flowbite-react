@@ -1,5 +1,5 @@
-import React from 'react';
 import type { Meta, Story } from '@storybook/react';
+import React from 'react';
 import { theme } from '../../';
 import type { ButtonProps } from './Button';
 import { Button } from './Button';

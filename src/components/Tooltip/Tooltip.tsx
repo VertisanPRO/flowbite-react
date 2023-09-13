@@ -1,6 +1,6 @@
-import React from 'react';
 import type { Placement } from '@floating-ui/core';
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react';
+import React from 'react';
 import type { DeepPartial } from '../../';
 import { useTheme } from '../../';
 import type { FlowbiteFloatingTheme } from '../../components/Floating';

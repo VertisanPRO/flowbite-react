@@ -1,5 +1,5 @@
-import React from 'react';
 import type { MDXComponents } from 'mdx/types';
+import React from 'react';
 
 export const useMDXComponents: (components: MDXComponents) => MDXComponents = (components) => {
   return {

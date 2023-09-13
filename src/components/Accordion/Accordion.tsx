@@ -1,5 +1,5 @@
 import type { ComponentProps, FC, PropsWithChildren, ReactElement } from 'react';
-import { Children, cloneElement, useMemo, useState } from 'react';
+import React, { Children, cloneElement, useMemo, useState } from 'react';
 import { HiChevronDown } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial, FlowbiteBoolean } from '../../';
@@ -11,7 +11,6 @@ import type { AccordionPanelProps } from './AccordionPanel';
 import { AccordionPanel } from './AccordionPanel';
 import type { FlowbiteAccordionTitleTheme } from './AccordionTitle';
 import { AccordionTitle } from './AccordionTitle';
-import React from 'react';
 
 export interface FlowbiteAccordionTheme {
   root: FlowbiteAccordionRootTheme;

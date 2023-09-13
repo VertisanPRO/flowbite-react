@@ -1,6 +1,5 @@
-import React from 'react';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import { HiOutlineChevronRight } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial, FlowbiteBoolean } from '../../';

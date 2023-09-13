@@ -1,5 +1,5 @@
-import React from 'react';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
+import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial, FlowbiteHeadingLevel } from '../../';
 import { useTheme } from '../../';

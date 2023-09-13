@@ -1,7 +1,6 @@
-import React from 'react';
 import { nanoid } from 'nanoid';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial, FlowbiteColors, FlowbiteSizes } from '../../';
 import { useTheme } from '../../';
@@ -56,15 +55,15 @@ export const Progress: FC<ProgressProps> = ({
       <div id={id} aria-label={textLabel} aria-valuenow={progress} role="progressbar" {...props}>
         {((textLabel && labelText && textLabelPosition === 'outside') ||
           (progress > 0 && labelProgress && progressLabelPosition === 'outside')) && (
-            <div className={theme.label} data-testid="flowbite-progress-outer-label-container">
-              {textLabel && labelText && textLabelPosition === 'outside' && (
-                <span data-testid="flowbite-progress-outer-text-label">{textLabel}</span>
-              )}
-              {labelProgress && progressLabelPosition === 'outside' && (
-                <span data-testid="flowbite-progress-outer-progress-label">{progress}%</span>
-              )}
-            </div>
-          )}
+          <div className={theme.label} data-testid="flowbite-progress-outer-label-container">
+            {textLabel && labelText && textLabelPosition === 'outside' && (
+              <span data-testid="flowbite-progress-outer-text-label">{textLabel}</span>
+            )}
+            {labelProgress && progressLabelPosition === 'outside' && (
+              <span data-testid="flowbite-progress-outer-progress-label">{progress}%</span>
+            )}
+          </div>
+        )}
 
         <div className={twMerge(theme.base, theme.size[size], className)}>
           <div style={{ width: `${progress}%` }} className={twMerge(theme.bar, theme.color[color], theme.size[size])}>

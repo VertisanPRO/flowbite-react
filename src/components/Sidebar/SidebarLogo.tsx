@@ -1,7 +1,6 @@
-import React from 'react';
 import { nanoid } from 'nanoid';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial, FlowbiteBoolean } from '../../';
 import { useTheme } from '../../';

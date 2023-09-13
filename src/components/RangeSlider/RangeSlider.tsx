@@ -1,6 +1,5 @@
-import React from 'react';
 import type { ComponentProps } from 'react';
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial, FlowbiteTextInputSizes } from '../../';
 import { useTheme } from '../../';

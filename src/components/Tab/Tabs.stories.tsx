@@ -1,5 +1,5 @@
-import React from 'react';
 import type { Meta } from '@storybook/react';
+import React from 'react';
 import { HiAdjustments, HiClipboardList, HiUserCircle } from 'react-icons/hi';
 import { MdDashboard } from 'react-icons/md';
 import type { TabsProps } from './Tabs';

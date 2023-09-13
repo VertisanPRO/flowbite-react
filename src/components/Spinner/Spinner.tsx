@@ -1,5 +1,5 @@
-import React from 'react';
 import type { ComponentProps, FC } from 'react';
+import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial, FlowbiteColors, FlowbiteSizes } from '../../';
 import { useTheme } from '../../';

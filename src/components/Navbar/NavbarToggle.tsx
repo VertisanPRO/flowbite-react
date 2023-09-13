@@ -1,5 +1,5 @@
-import React from 'react';
 import type { ComponentProps, FC } from 'react';
+import React from 'react';
 import { FaBars } from 'react-icons/fa';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial } from '../../';

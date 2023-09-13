@@ -1,6 +1,5 @@
-import React from 'react';
 import type { Dispatch, FC, ReactNode, SetStateAction } from 'react';
-import { createContext, useCallback, useContext, useEffect, useState } from 'react';
+import React, { createContext, useCallback, useContext, useEffect, useState } from 'react';
 import { isClient } from '../../helpers/is-client';
 import { theme } from '../../theme';
 import type { FlowbiteTheme } from './FlowbiteTheme';

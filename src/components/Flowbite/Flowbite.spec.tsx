@@ -1,5 +1,5 @@
-import React from 'react';
 import { act, render } from '@testing-library/react';
+import React from 'react';
 import { describe, expect, it } from 'vitest';
 import { Flowbite, useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';

@@ -1,7 +1,7 @@
-import React from 'react';
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import Image from 'next/image';
 import type { FC } from 'react';
+import React from 'react';
 import { afterEach, beforeEach, describe, it, vi } from 'vitest';
 import type { CarouselProps } from './Carousel';
 import { Carousel } from './Carousel';

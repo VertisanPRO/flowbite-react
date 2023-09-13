@@ -1,7 +1,6 @@
-import React from 'react';
 import { nanoid } from 'nanoid';
 import type { ComponentProps, FC, KeyboardEvent, MouseEvent } from 'react';
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial, FlowbiteBoolean, FlowbiteColors } from '../../';
 import { useTheme } from '../../';

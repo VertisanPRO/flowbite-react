@@ -1,5 +1,5 @@
-import React from 'react';
 import type { Meta, Story } from '@storybook/react';
+import React from 'react';
 import type { NavbarComponentProps } from '../../';
 import { Avatar, Button, Dropdown, Navbar } from '../../';
 

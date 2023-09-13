@@ -1,8 +1,7 @@
-import React from 'react';
 import type { Placement } from '@floating-ui/core';
 import { autoUpdate, useFocus } from '@floating-ui/react';
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react';
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { useBaseFLoating, useFloatingInteractions } from '../../helpers/use-floating';
 import { getArrowPlacement } from './helpers';

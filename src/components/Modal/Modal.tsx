@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   FloatingFocusManager,
   FloatingOverlay,
@@ -11,7 +10,7 @@ import {
   useRole,
 } from '@floating-ui/react';
 import type { MutableRefObject } from 'react';
-import { forwardRef, useState, type ComponentPropsWithoutRef, type PropsWithChildren } from 'react';
+import React, { forwardRef, useState, type ComponentPropsWithoutRef, type PropsWithChildren } from 'react';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial, FlowbiteBoolean, FlowbitePositions, FlowbiteSizes } from '../../';
 import { useTheme } from '../../';

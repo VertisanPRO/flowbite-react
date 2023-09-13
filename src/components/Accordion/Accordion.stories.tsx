@@ -1,9 +1,9 @@
 import type { Meta, StoryFn } from '@storybook/react';
 import type { ComponentProps, FC } from 'react';
+import React from 'react';
 import { HiChevronDown, HiOutlineArrowCircleDown } from 'react-icons/hi';
 import type { AccordionProps } from './Accordion';
 import { Accordion } from './Accordion';
-import React from 'react';
 
 export default {
   title: 'Components/Accordion',

@@ -1,8 +1,7 @@
-import React from 'react';
 import { render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import type { RefObject } from 'react';
-import { createRef, useState } from 'react';
+import React, { createRef, useState } from 'react';
 import { describe, expect, it } from 'vitest';
 import { Button, TextInput } from '../../';
 import type { ModalProps } from './Modal';

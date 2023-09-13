@@ -1,7 +1,6 @@
-import React from 'react';
 import { nanoid } from 'nanoid';
 import type { ComponentProps, FC, PropsWithChildren, ReactElement } from 'react';
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { HiChevronDown } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial, FlowbiteBoolean } from '../../';
@@ -29,8 +28,8 @@ export interface FlowbiteSidebarCollapseTheme {
 
 export interface SidebarCollapseProps
   extends PropsWithChildren<unknown>,
-  Pick<SidebarItemProps, 'active' | 'as' | 'href' | 'icon' | 'label' | 'labelColor'>,
-  ComponentProps<'button'> {
+    Pick<SidebarItemProps, 'active' | 'as' | 'href' | 'icon' | 'label' | 'labelColor'>,
+    ComponentProps<'button'> {
   onClick?: ComponentProps<'button'>['onClick'];
   open?: boolean;
   chevronIcon?: FC<ComponentProps<'svg'>>;

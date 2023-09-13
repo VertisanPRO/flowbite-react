@@ -1,6 +1,5 @@
-import React from 'react';
 import { nanoid } from 'nanoid';
-import {
+import React, {
   useLayoutEffect,
   useMemo,
   type ComponentProps,

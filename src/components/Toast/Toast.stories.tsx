@@ -1,5 +1,5 @@
-import React from 'react';
 import type { Meta, Story } from '@storybook/react';
+import React from 'react';
 import { HiFire } from 'react-icons/hi';
 import type { ToastProps } from './Toast';
 import { Toast } from './Toast';

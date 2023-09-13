@@ -1,7 +1,7 @@
-import React from 'react';
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import type { FC, PropsWithChildren } from 'react';
+import React from 'react';
 import { describe, expect, it } from 'vitest';
 import type { DropdownProps } from './Dropdown';
 import { Dropdown } from './Dropdown';

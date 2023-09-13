@@ -1,5 +1,5 @@
-import React from 'react';
 import type { Meta, StoryFn } from '@storybook/react';
+import React from 'react';
 import type { DatepickerProps } from './Datepicker';
 import { Datepicker } from './Datepicker';
 import { WeekStart, getFirstDateInRange } from './helpers';
