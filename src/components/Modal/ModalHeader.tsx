@@ -30,7 +30,7 @@ export interface ModalHeaderProps extends PropsWithChildren<ComponentProps<'div'
 }
 
 export const ModalHeader: FC<ModalHeaderProps> = ({
-  as: Component = 'h3' as JSX.ElementType,
+  as: Component = 'h3',
   children,
   className,
   theme: customTheme = {},

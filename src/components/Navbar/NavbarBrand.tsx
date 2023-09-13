@@ -16,7 +16,7 @@ export interface NavbarBrandProps extends PropsWithChildren<unknown>, ComponentP
 }
 
 export const NavbarBrand: FC<NavbarBrandProps> = ({
-  as: Component = 'a' as JSX.ElementType,
+  as: Component = 'a',
   children,
   className,
   theme: customTheme = {},
