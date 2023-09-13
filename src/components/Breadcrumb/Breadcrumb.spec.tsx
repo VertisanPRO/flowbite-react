@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import type { FC } from 'react';
 import { HiHome } from 'react-icons/hi';

@@ -1,3 +1,4 @@
+import React from 'react';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { forwardRef } from 'react';
 import { HiOutlineChevronRight } from 'react-icons/hi';

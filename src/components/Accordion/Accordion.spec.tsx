@@ -6,6 +6,7 @@ import { describe, expect, it } from 'vitest';
 import { Flowbite } from '../../';
 import type { AccordionProps } from './Accordion';
 import { Accordion } from './Accordion';
+import React from 'react';
 
 describe('Components / Accordion', () => {
   describe('A11y', () => {

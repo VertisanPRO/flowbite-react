@@ -1,3 +1,4 @@
+import React from 'react';
 import type { ComponentProps, FC, ReactEventHandler, ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial } from '../../';

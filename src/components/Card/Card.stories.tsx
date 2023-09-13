@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Meta, StoryFn } from '@storybook/react';
 import Image from 'next/image';
 import type { CardProps } from './Card';

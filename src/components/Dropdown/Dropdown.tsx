@@ -1,3 +1,4 @@
+import React from 'react';
 import type { ExtendedRefs, useInteractions } from '@floating-ui/react';
 import { FloatingFocusManager, FloatingList, useListNavigation, useTypeahead } from '@floating-ui/react';
 import type {
@@ -30,8 +31,8 @@ import { useBaseFLoating, useFloatingInteractions } from '../../helpers/use-floa
 
 export interface FlowbiteDropdownFloatingTheme
   extends FlowbiteFloatingTheme,
-    FlowbiteDropdownDividerTheme,
-    FlowbiteDropdownHeaderTheme {
+  FlowbiteDropdownDividerTheme,
+  FlowbiteDropdownHeaderTheme {
   item: FlowbiteDropdownItemTheme;
 }
 
@@ -44,8 +45,8 @@ export interface FlowbiteDropdownTheme {
 
 export interface DropdownProps
   extends PropsWithChildren<unknown>,
-    Pick<FloatingProps, 'placement' | 'trigger'>,
-    Omit<ButtonProps, 'theme'> {
+  Pick<FloatingProps, 'placement' | 'trigger'>,
+  Omit<ButtonProps, 'theme'> {
   arrowIcon?: boolean;
   dismissOnClick?: boolean;
   floatingArrow?: boolean;

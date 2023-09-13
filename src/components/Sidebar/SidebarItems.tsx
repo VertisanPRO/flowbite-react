@@ -1,8 +1,9 @@
+import React from 'react';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { useTheme } from '../../';
 
-export interface SidebarItemsProps extends PropsWithChildren<unknown>, ComponentProps<'div'> {}
+export interface SidebarItemsProps extends PropsWithChildren<unknown>, ComponentProps<'div'> { }
 
 export const SidebarItems: FC<SidebarItemsProps> = ({ children, className, ...props }) => {
   const theme = useTheme().theme.sidebar.items;

@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Meta, Story } from '@storybook/react';
 import type { RadioProps } from './Radio';
 import { Radio } from './Radio';

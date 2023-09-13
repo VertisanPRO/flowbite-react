@@ -1,3 +1,4 @@
+import React from 'react';
 import type { ComponentProps, FC, PropsWithChildren, ReactElement, ReactNode } from 'react';
 import { Children, cloneElement, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';

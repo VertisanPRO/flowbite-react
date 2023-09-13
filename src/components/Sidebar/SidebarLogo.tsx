@@ -1,3 +1,4 @@
+import React from 'react';
 import { nanoid } from 'nanoid';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { useMemo } from 'react';

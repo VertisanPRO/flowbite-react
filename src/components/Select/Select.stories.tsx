@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Meta, Story } from '@storybook/react';
 import { BsFlagFill } from 'react-icons/bs';
 import type { SelectProps } from './Select';

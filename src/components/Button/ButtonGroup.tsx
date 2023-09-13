@@ -1,3 +1,4 @@
+import React from 'react';
 import type { ComponentProps, FC, PropsWithChildren, ReactElement } from 'react';
 import { Children, cloneElement, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
@@ -20,8 +21,8 @@ export interface PositionInButtonGroup {
 
 export interface ButtonGroupProps
   extends ComponentProps<'div'>,
-    PropsWithChildren<unknown>,
-    Pick<ButtonProps, 'outline' | 'pill'> {
+  PropsWithChildren<unknown>,
+  Pick<ButtonProps, 'outline' | 'pill'> {
   theme?: DeepPartial<FlowbiteButtonGroupTheme>;
 }
 

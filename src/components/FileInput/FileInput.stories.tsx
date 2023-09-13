@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Meta, Story } from '@storybook/react';
 import type { FileInputProps } from './FileInput';
 import { FileInput } from './FileInput';

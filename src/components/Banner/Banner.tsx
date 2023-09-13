@@ -1,3 +1,4 @@
+import React from 'react';
 import type { ComponentProps, FC } from 'react';
 import { BannerCollapseButton } from './BannerCollapseButton';
 

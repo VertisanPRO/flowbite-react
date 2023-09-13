@@ -1,3 +1,4 @@
+import React from 'react';
 import { action } from '@storybook/addon-actions';
 import type { Meta, Story } from '@storybook/react';
 import type { DropdownProps } from './Dropdown';

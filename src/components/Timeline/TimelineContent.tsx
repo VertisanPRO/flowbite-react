@@ -1,3 +1,4 @@
+import React from 'react';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial } from '../../';
@@ -10,8 +11,8 @@ import type { FlowbiteTimelineTitleTheme } from './TimelineTitle';
 
 export interface FlowbiteTimelineContentTheme
   extends FlowbiteTimelineBodyTheme,
-    FlowbiteTimelineTimeTheme,
-    FlowbiteTimelineTitleTheme {
+  FlowbiteTimelineTimeTheme,
+  FlowbiteTimelineTitleTheme {
   root: {
     base: string;
   };

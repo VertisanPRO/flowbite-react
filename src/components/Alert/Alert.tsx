@@ -1,3 +1,4 @@
+import React from 'react';
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react';
 import { HiX } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';

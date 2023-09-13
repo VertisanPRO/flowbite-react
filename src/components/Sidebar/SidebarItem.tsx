@@ -1,3 +1,4 @@
+import React from 'react';
 import { nanoid } from 'nanoid';
 import type { ComponentProps, ElementType, FC, PropsWithChildren, ReactNode } from 'react';
 import { forwardRef, useMemo } from 'react';
@@ -28,8 +29,8 @@ export interface FlowbiteSidebarItemTheme {
 
 export interface SidebarItemProps
   extends PropsWithChildren<unknown>,
-    Omit<ComponentProps<'div'>, 'ref'>,
-    Record<string, unknown> {
+  Omit<ComponentProps<'div'>, 'ref'>,
+  Record<string, unknown> {
   active?: boolean;
   as?: ElementType;
   href?: string;

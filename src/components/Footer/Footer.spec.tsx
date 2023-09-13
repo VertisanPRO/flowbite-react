@@ -1,3 +1,4 @@
+import React from 'react';
 import { cleanup, render, screen } from '@testing-library/react';
 import type { FC } from 'react';
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';

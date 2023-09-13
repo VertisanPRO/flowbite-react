@@ -11,6 +11,7 @@ import type { AccordionPanelProps } from './AccordionPanel';
 import { AccordionPanel } from './AccordionPanel';
 import type { FlowbiteAccordionTitleTheme } from './AccordionTitle';
 import { AccordionTitle } from './AccordionTitle';
+import React from 'react';
 
 export interface FlowbiteAccordionTheme {
   root: FlowbiteAccordionRootTheme;

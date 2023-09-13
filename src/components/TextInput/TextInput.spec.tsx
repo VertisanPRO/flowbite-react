@@ -1,3 +1,4 @@
+import React from 'react';
 import { render } from '@testing-library/react';
 import { HiEye } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';

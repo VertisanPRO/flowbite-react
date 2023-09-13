@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { HiGlobe, HiLockClosed } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';

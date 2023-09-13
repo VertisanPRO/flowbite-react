@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Meta, Story } from '@storybook/react';
 import type { RatingProps } from './Rating';
 import { Rating } from './Rating';

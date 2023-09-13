@@ -1,3 +1,4 @@
+import React from 'react';
 import { nanoid } from 'nanoid';
 import type { ComponentProps, FC, PropsWithChildren, ReactElement } from 'react';
 import { useEffect, useMemo, useState } from 'react';
@@ -28,8 +29,8 @@ export interface FlowbiteSidebarCollapseTheme {
 
 export interface SidebarCollapseProps
   extends PropsWithChildren<unknown>,
-    Pick<SidebarItemProps, 'active' | 'as' | 'href' | 'icon' | 'label' | 'labelColor'>,
-    ComponentProps<'button'> {
+  Pick<SidebarItemProps, 'active' | 'as' | 'href' | 'icon' | 'label' | 'labelColor'>,
+  ComponentProps<'button'> {
   onClick?: ComponentProps<'button'>['onClick'];
   open?: boolean;
   chevronIcon?: FC<ComponentProps<'svg'>>;

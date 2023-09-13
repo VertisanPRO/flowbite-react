@@ -1,3 +1,4 @@
+import React from 'react';
 import { nanoid } from 'nanoid';
 import type { ComponentProps, FC, KeyboardEvent, MouseEvent } from 'react';
 import { useMemo } from 'react';

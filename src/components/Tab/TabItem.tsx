@@ -1,3 +1,4 @@
+import React from 'react';
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react';
 
 export interface TabItemProps extends PropsWithChildren<unknown>, Omit<ComponentProps<'div'>, 'title'> {
