@@ -181,7 +181,7 @@ const DocsSidebar: FC<DocsLayoutState> = ({ isCollapsed, setCollapsed }) => {
                   className={twMerge(
                     'flex w-full items-center justify-between bg-transparent p-0 text-sm font-semibold uppercase tracking-wide',
                     pathname.includes('/getting-started/') &&
-                      'text-primary-700 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-500',
+                    'text-primary-700 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-500',
                   )}
                 >
                   Getting started
@@ -218,7 +218,7 @@ const DocsSidebar: FC<DocsLayoutState> = ({ isCollapsed, setCollapsed }) => {
                   className={twMerge(
                     'flex w-full items-center justify-between bg-transparent p-0 text-sm font-semibold uppercase tracking-wide',
                     pathname.includes('/customize/') &&
-                      'text-primary-700 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-500',
+                    'text-primary-700 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-500',
                   )}
                 >
                   Customize
@@ -243,7 +243,7 @@ const DocsSidebar: FC<DocsLayoutState> = ({ isCollapsed, setCollapsed }) => {
                   className={twMerge(
                     'flex w-full items-center justify-between bg-transparent p-0 text-sm font-semibold uppercase tracking-wide',
                     pathname.includes('/components/') &&
-                      'text-primary-700 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-500',
+                    'text-primary-700 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-500',
                   )}
                 >
                   Components
@@ -297,7 +297,7 @@ const DocsSidebar: FC<DocsLayoutState> = ({ isCollapsed, setCollapsed }) => {
   );
 };
 
-const SidebarLink: FC<PropsWithChildren & { href: string }> = ({ children, href }) => {
+const SidebarLink: FC<PropsWithChildren<unknown> & { href: string }> = ({ children, href }) => {
   const pathname = usePathname();
 
   return (
