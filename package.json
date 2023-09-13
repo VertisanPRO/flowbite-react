@@ -28,7 +28,6 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "lint": "eslint --color .",
-    "prepublishOnly": "yarn build:lib",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "release": "standard-version -a",
