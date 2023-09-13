@@ -47,7 +47,7 @@ const AccordionComponent: FC<AccordionProps> = ({
   const panels = useMemo(
     () =>
       Children.map(children, (child, i) =>
-        cloneElement(child, {
+        cloneElement(child as React.ReactElement, {
           alwaysOpen,
           arrowIcon,
           flush,
