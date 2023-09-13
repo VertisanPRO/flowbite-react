@@ -5,7 +5,6 @@ cypress/screenshots
 cypress/videos
 lib
 node_modules
-storybook-static
 .DS_Store
 npm-debug.log*
 tsconfig.tsbuildinfo

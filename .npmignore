@@ -4,7 +4,6 @@
 build
 pages
 public
-storybook-static
 styles
 .gitignore
 .prettierrc
