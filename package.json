@@ -1,7 +1,7 @@
 {
-  "name": "flowbite-react",
+  "name": "@vertisanpro/flowbite-react",
   "version": "0.6.0",
-  "description": "Official React components built for Flowbite and Tailwind CSS",
+  "description": "Non-Official React components built for Flowbite and Tailwind CSS",
   "keywords": [
     "design-system",
     "flowbite",
@@ -12,7 +12,6 @@
     "tailwind-css"
   ],
   "homepage": "https://flowbite-react.com",
-  "bugs": "https://github.com/themesberg/flowbite-react/issues",
   "license": "MIT",
   "files": [
     "./lib/"
@@ -22,7 +21,7 @@
   "types": "./lib/esm/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/themesberg/flowbite-react"
+    "url": "https://github.com/VertisanPRO/flowbite-react"
   },
   "scripts": {
     "build": "next build",
