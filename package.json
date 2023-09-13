@@ -24,6 +24,9 @@
     "url": "https://github.com/VertisanPRO/flowbite-react"
   },
   "scripts": {
+    "build:lib": "rm -rf ./lib/ && yarn build:lib:esm && yarn build:lib:cjs",
+    "build:lib:cjs": "tsc -p tsconfig.lib.json",
+    "build:lib:esm": "tsc -p tsconfig.lib.json --module es2022 --declaration --outDir ./lib/esm",
     "commit": "cz",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
