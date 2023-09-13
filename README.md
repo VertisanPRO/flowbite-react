@@ -1,5 +1,6 @@
 <div align="center">
   <h1>:construction: flowbite-react (unreleased) :construction:</h1>
+  <h3>This repository is made to work with React v16. No support will be given, this is primarily for Vertisan</h3>
   <p>
     <a href="https://flowbite-react.com">
       <img alt="Flowbite - Tailwind CSS components" width="350" src=".github/assets/flowbite-react-github.png">
