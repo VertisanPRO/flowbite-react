@@ -1,6 +1,5 @@
-import React from 'react';
 import type { FC, ReactNode } from 'react';
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { HiArrowLeft, HiArrowRight, HiCalendar } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial } from '..';
