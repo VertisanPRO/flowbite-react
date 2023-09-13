@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Meta, Story } from '@storybook/react';
 import type { CheckboxProps } from './Checkbox';
 import { Checkbox } from './Checkbox';

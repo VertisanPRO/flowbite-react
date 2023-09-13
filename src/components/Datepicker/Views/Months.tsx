@@ -1,3 +1,4 @@
+import React from 'react';
 import type { FC } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../../helpers/merge-deep';
