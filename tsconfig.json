@@ -29,6 +29,6 @@
     "target": "ESNext",
     "types": ["@testing-library/jest-dom", "node", "vitest"]
   },
-  "exclude": ["./build/", "./lib/", "./.next/", "./next.config.mjs", "./postcss.config.js"],
+  "exclude": ["./build/", "./lib/", "./.next/", "./next.config.mjs", "./postcss.config.js", "./cypress.config.ts"],
   "include": [".next/types/**/*.ts", "**/*.js", "**/*.mdx", "**/*.mjs", "**/*.ts", "**/*.tsx"]
 }
