@@ -20,7 +20,7 @@ export interface NavbarLinkProps extends PropsWithChildren<unknown>, ComponentPr
 
 export const NavbarLink: FC<NavbarLinkProps> = ({
   active,
-  as: Component = 'a',
+  as: Component = 'a' as JSX.ElementType,
   disabled,
   children,
   className,

@@ -16,7 +16,7 @@ export interface FooterLinkProps extends PropsWithChildren<unknown>, ComponentPr
 }
 
 export const FooterLink: FC<FooterLinkProps> = ({
-  as: Component = 'a',
+  as: Component = 'a' as JSX.ElementType,
   children,
   className,
   href,

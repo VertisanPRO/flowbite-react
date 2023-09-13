@@ -15,7 +15,7 @@ export interface FooterTitleProps extends PropsWithChildren<ComponentProps<'h2'>
 }
 
 export const FooterTitle: FC<FooterTitleProps> = ({
-  as: Component = 'h2',
+  as: Component = 'h2' as JSX.ElementType,
   className,
   theme: customTheme = {},
   title,
