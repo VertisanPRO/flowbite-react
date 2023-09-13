@@ -2,7 +2,6 @@
 CHANGELOG.md
 
 # Ignore the same files from .gitignore as well
-.next
 .vercel
 build
 coverage

@@ -24,20 +24,14 @@
     "url": "https://github.com/VertisanPRO/flowbite-react"
   },
   "scripts": {
-    "build": "next build",
-    "build:lib": "rm -rf ./lib/ && yarn build:lib:esm && yarn build:lib:cjs",
-    "build:lib:cjs": "tsc -p tsconfig.lib.json",
-    "build:lib:esm": "tsc -p tsconfig.lib.json --module esnext --declaration --outDir ./lib/esm",
     "commit": "cz",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "dev": "next dev",
     "lint": "eslint --color .",
     "prepublishOnly": "yarn build:lib",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "release": "standard-version -a",
-    "start": "next start",
     "storybook": "storybook dev -p 3001",
     "storybook:build": "storybook build",
     "test": "vitest",
@@ -63,7 +57,6 @@
   "devDependencies": {
     "@docsearch/react": "^3.5.1",
     "@mdx-js/loader": "^2.3.0",
-    "@next/mdx": "^13.4.7",
     "@storybook/addon-a11y": "^7.0.23",
     "@storybook/addon-actions": "^7.0.23",
     "@storybook/addon-docs": "^7.0.23",
@@ -104,14 +97,12 @@
     "cypress-axe": "^1.4.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.43.0",
-    "eslint-config-next": "^13.4.7",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.12",
     "fathom-client": "^3.5.0",
     "jsdom": "^22.1.0",
-    "next": "^13.4.7",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
     "prettier-plugin-organize-imports": "^3.2.2",
@@ -152,8 +143,7 @@
       "plugin:jsx-a11y/recommended",
       "plugin:react/recommended",
       "plugin:react-hooks/recommended",
-      "plugin:storybook/recommended",
-      "next"
+      "plugin:storybook/recommended"
     ],
     "ignorePatterns": [
       "/build/",
@@ -183,7 +173,6 @@
     "root": true,
     "rules": {
       "@typescript-eslint/consistent-type-imports": "warn",
-      "@next/next/no-img-element": "off",
       "jsx-a11y/anchor-is-valid": "off"
     }
   }

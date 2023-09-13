@@ -8,7 +8,6 @@
   "eslint.enable": true,
   "eslint.format.enable": true,
   "files.exclude": {
-    ".next/": true,
     ".vercel/": true,
     "build/": true,
     "coverage/": true,
