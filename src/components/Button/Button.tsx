@@ -125,7 +125,7 @@ const ButtonComponentFn = <T extends ElementType = 'button'>(
         outline && (theme.outline.color[color] ?? theme.outline.color.default),
         theme.pill[pill ? 'on' : 'off'],
         fullSized && theme.fullSized,
-        groupTheme.position[positionInGroup],
+        groupTheme.position[positionInGroup as keyof PositionInButtonGroup],
         className,
       )}
       {...theirProps}
