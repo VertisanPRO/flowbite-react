@@ -10,7 +10,6 @@ styles
 CNAME
 CODE_OF_CONDUCT.md
 codecov.yaml
-cypress.json
 LICENSE
 node_modules
 README.md

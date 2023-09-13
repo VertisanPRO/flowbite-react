@@ -28,8 +28,6 @@
     "build:lib:cjs": "tsc -p tsconfig.lib.json",
     "build:lib:esm": "tsc -p tsconfig.lib.json --module es2022 --declaration --outDir ./lib/esm",
     "commit": "cz",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
     "lint": "eslint --color .",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
@@ -37,8 +35,6 @@
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:open": "vitest --ui",
-    "test:e2e": "start-test 3000 cypress:run",
-    "test:e2e:open": "start-test 3000 cypress:open",
     "typecheck": "tsc"
   },
   "config": {
@@ -74,8 +70,6 @@
     "autoprefixer": "^10.4.14",
     "axe-core": "^4.7.2",
     "commitizen": "^4.3.0",
-    "cypress": "^12.15.0",
-    "cypress-axe": "^1.4.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.43.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
@@ -136,8 +130,7 @@
         "jsx": true
       },
       "project": [
-        "./tsconfig.json",
-        "./cypress/tsconfig.json"
+        "./tsconfig.json"
       ]
     },
     "plugins": [

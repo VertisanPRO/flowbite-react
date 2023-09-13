@@ -27,8 +27,8 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "types": ["@testing-library/jest-dom", "node", "vitest", "cypress"]
+    "types": ["@testing-library/jest-dom", "node", "vitest"]
   },
-  "exclude": ["./build/", "./lib/", "./postcss.config.js", "./cypress.config.ts"],
+  "exclude": ["./build/", "./lib/", "./postcss.config.js"],
   "include": ["**/*.js", "**/*.mdx", "**/*.mjs", "**/*.ts", "**/*.tsx"]
 }

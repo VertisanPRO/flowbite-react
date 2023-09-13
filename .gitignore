@@ -1,8 +1,6 @@
 .vercel
 build
 coverage
-cypress/screenshots
-cypress/videos
 lib
 node_modules
 .DS_Store
