@@ -29,7 +29,7 @@ interface DocsLayoutState {
   setCollapsed: (collapsed: boolean) => void;
 }
 
-const DocsLayout: NextPage<PropsWithChildren> = ({ children }) => {
+const DocsLayout: NextPage<PropsWithChildren<unknown>> = ({ children }) => {
   const pathname = usePathname();
   const [isCollapsed, setCollapsed] = useState(true);
   const [tableOfContents, setTableOfContents] = useState('');

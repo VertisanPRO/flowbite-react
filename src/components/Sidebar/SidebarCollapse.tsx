@@ -55,7 +55,7 @@ export const SidebarCollapse: FC<SidebarCollapseProps> = ({
 
   useEffect(() => setOpen(open), [open]);
 
-  const Wrapper: FC<PropsWithChildren> = ({ children }) => (
+  const Wrapper: FC<PropsWithChildren<unknown>> = ({ children }) => (
     <li>
       {isCollapsed && !isOpen ? (
         <Tooltip content={label} placement="right">

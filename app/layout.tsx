@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   },
 };
 
-const RootLayout: NextPage<PropsWithChildren> = ({ children }) => {
+const RootLayout: NextPage<PropsWithChildren<unknown>> = ({ children }) => {
   return (
     <html lang="en" className={`${interFont.variable} font-sans`}>
       <body>
