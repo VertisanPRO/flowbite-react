@@ -289,7 +289,7 @@ const DocsSidebar: FC<DocsLayoutState> = ({ isCollapsed, setCollapsed }) => {
         // eslint-disable-next-line jsx-a11y/no-static-element-interactions
         <div
           onClick={() => setCollapsed(true)}
-          onKeyUp={(key) => key.code === 'Escape' && setCollapsed(true)}
+          onKeyUp={(key) => key.key === 'Escape' && setCollapsed(true)}
           className="fixed inset-0 z-40 bg-gray-900/50 dark:bg-gray-900/60 lg:hidden"
         />
       )}
