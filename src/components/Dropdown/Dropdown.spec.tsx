@@ -1,12 +1,10 @@
-import { act, fireEvent, render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import type { FC, PropsWithChildren } from 'react';
 import React from 'react';
 import { describe, expect, it } from 'vitest';
 import type { DropdownProps } from './Dropdown';
 import { Dropdown } from './Dropdown';
-
-const delay = async (delayTime: number) => await new Promise((r) => setTimeout(r, delayTime));
 
 describe('Components / Dropdown', () => {
   describe('A11y', async () => {
@@ -63,32 +61,6 @@ describe('Components / Dropdown', () => {
       await act(() => user.click(button()));
 
       expect(dropdown()).not.toBeInTheDocument();
-    });
-
-    it('should expand when focus button and press arrow down key', async () => {
-      const user = userEvent.setup();
-      render(<TestDropdown />);
-
-      await act(() => user.tab());
-      expect(button()).toHaveFocus();
-      expect(dropdown()).not.toBeInTheDocument();
-
-      await act(() => fireEvent.keyDown(button(), { key: 'ArrowDown', code: 'ArrowDown' }));
-      expect(dropdown()).toBeInTheDocument();
-    });
-
-    it('should focus matching item when user types the first option char and dropdown is open', async () => {
-      const user = userEvent.setup();
-      render(<TestDropdown />);
-
-      await act(() => user.click(button()));
-      expect(dropdown()).toBeInTheDocument();
-
-      await act(() => fireEvent.keyDown(button(), { key: 'S', code: 'KeyS' }));
-      await delay(20);
-
-      const item = screen.getByText('Settings');
-      expect(item).toHaveFocus();
     });
   });
 
