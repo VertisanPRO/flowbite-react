@@ -30,5 +30,5 @@
     "types": ["@testing-library/jest-dom", "node", "vitest"]
   },
   "exclude": ["./build/", "./lib/", "./postcss.config.js"],
-  "include": ["**/*.js", "**/*.mdx", "**/*.mjs", "**/*.ts", "**/*.tsx"]
+  "include": ["**/*.js", "**/*.mjs", "**/*.ts", "**/*.tsx"]
 }
