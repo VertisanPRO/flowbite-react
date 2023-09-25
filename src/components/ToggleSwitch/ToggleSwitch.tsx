@@ -53,7 +53,7 @@ export const ToggleSwitch: FC<ToggleSwitchProps> = ({
   };
 
   const handleOnKeyDown = (event: KeyboardEvent<HTMLButtonElement>): void => {
-    if (event.code == 'Enter') {
+    if (event.key == 'Enter') {
       event.preventDefault();
     }
   };
