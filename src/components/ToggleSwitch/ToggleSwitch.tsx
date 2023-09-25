@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-import type { ComponentProps, FC, KeyboardEvent, MouseEvent } from 'react';
+import type { ComponentProps, FC, KeyboardEvent } from 'react';
 import React, { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial, FlowbiteBoolean, FlowbiteColors } from '../../';
@@ -27,7 +27,7 @@ export interface FlowbiteToggleSwitchToggleTheme {
 export type ToggleSwitchProps = Omit<ComponentProps<'button'>, 'onChange'> & {
   checked: boolean;
   color?: keyof FlowbiteColors;
-  label: string;
+  label?: string;
   onChange: (checked: boolean) => void;
   theme?: DeepPartial<FlowbiteToggleSwitchTheme>;
 };
@@ -48,25 +48,28 @@ export const ToggleSwitch: FC<ToggleSwitchProps> = ({
 
   const toggle = (): void => onChange(!checked);
 
-  const handleClick = (event: MouseEvent<HTMLButtonElement>): void => {
-    event.preventDefault();
+  const handleClick = (): void => {
     toggle();
   };
 
-  const handleKeyPress = (event: KeyboardEvent<HTMLButtonElement>): void => {
-    event.preventDefault();
+  const handleOnKeyDown = (event: KeyboardEvent<HTMLButtonElement>): void => {
+    if (event.code == 'Enter') {
+      event.preventDefault();
+    }
   };
 
   return (
     <>
-      {name && checked && <input checked={checked} hidden name={name} readOnly type="checkbox" className="sr-only" />}
+      {name && checked ? (
+        <input checked={checked} hidden name={name} readOnly type="checkbox" className="sr-only" />
+      ) : null}
       <button
         aria-checked={checked}
         aria-labelledby={`${id}-flowbite-toggleswitch-label`}
         disabled={disabled}
         id={`${id}-flowbite-toggleswitch`}
         onClick={handleClick}
-        onKeyPress={handleKeyPress}
+        onKeyDown={handleOnKeyDown}
         role="switch"
         tabIndex={0}
         type="button"
@@ -78,16 +81,18 @@ export const ToggleSwitch: FC<ToggleSwitchProps> = ({
           className={twMerge(
             theme.toggle.base,
             theme.toggle.checked[checked ? 'on' : 'off'],
-            !disabled && checked && theme.toggle.checked.color[color],
+            checked && theme.toggle.checked.color[color],
           )}
         />
-        <span
-          data-testid="flowbite-toggleswitch-label"
-          id={`${id}-flowbite-toggleswitch-label`}
-          className={theme.root.label}
-        >
-          {label}
-        </span>
+        {label?.length ? (
+          <span
+            data-testid="flowbite-toggleswitch-label"
+            id={`${id}-flowbite-toggleswitch-label`}
+            className={theme.root.label}
+          >
+            {label}
+          </span>
+        ) : null}
       </button>
     </>
   );
