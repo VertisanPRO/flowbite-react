@@ -1,11 +1,12 @@
 import { render } from '@testing-library/react';
+import React from 'react';
 import { describe, expect, it } from 'vitest';
 import { FloatingLabel } from '~/src/components/FloatingLabel/FloatingLabel';
 
 describe('Components / Floating Label', () => {
   describe('Floating Label properties', () => {
     it('should have `role="textbox"` by default', () => {
-      const textInput = render(<FloatingLabel variant={'filled'} label={'Label'} />).getByRole('textbox');
+    const textInput = render(<FloatingLabel variant={'filled'} label={'Label'} />).getByRole('textbox');
       expect(textInput).toBeInTheDocument();
     });
 
