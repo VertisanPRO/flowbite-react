@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { nanoid } from 'nanoid';
 import type { ComponentProps } from 'react';
 import React, { forwardRef, useMemo } from 'react';
