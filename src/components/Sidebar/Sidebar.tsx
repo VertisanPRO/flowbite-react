@@ -1,9 +1,12 @@
+'use client';
+
 import type { ComponentProps, ElementType, FC, PropsWithChildren } from 'react';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
-import type { DeepPartial, FlowbiteBoolean } from '../../';
-import { useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
+import { getTheme } from '../../theme-store';
+import type { DeepPartial } from '../../types';
+import type { FlowbiteBoolean } from '../Flowbite';
 import type { FlowbiteSidebarCTATheme } from './SidebarCTA';
 import { SidebarCTA } from './SidebarCTA';
 import type { FlowbiteSidebarCollapseTheme } from './SidebarCollapse';
@@ -46,7 +49,7 @@ const SidebarComponent: FC<SidebarProps> = ({
   className,
   ...props
 }) => {
-  const theme = mergeDeep(useTheme().theme.sidebar, customTheme);
+  const theme = mergeDeep(getTheme().sidebar, customTheme);
 
   return (
     <SidebarContext.Provider value={{ isCollapsed }}>

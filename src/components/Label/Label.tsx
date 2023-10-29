@@ -1,9 +1,10 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
-import type { DeepPartial, FlowbiteStateColors } from '../../';
-import { useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
+import { getTheme } from '../../theme-store';
+import type { DeepPartial } from '../../types';
+import type { FlowbiteStateColors } from '../Flowbite';
 
 export interface FlowbiteLabelTheme {
   root: FlowbiteLabelRootTheme;
@@ -36,7 +37,7 @@ export const Label: FC<LabelProps> = ({
   value,
   ...props
 }) => {
-  const theme = mergeDeep(useTheme().theme.label, customTheme);
+  const theme = mergeDeep(getTheme().label, customTheme);
 
   return (
     <label

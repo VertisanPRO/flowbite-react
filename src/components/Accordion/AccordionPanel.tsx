@@ -1,3 +1,5 @@
+'use client';
+
 import type { FC, PropsWithChildren } from 'react';
 import React, { useState } from 'react';
 import type { AccordionProps } from './Accordion';

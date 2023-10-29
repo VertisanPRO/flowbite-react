@@ -1,26 +1,36 @@
 import type { ComponentProps } from 'react';
 import React, { forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
-import type { DeepPartial } from '../../';
-import { useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
+import { getTheme } from '../../theme-store';
+import type { DeepPartial } from '../../types';
+import type { FlowbiteColors } from '../Flowbite';
 
 export interface FlowbiteCheckboxTheme {
   root: FlowbiteCheckboxRootTheme;
 }
 export interface FlowbiteCheckboxRootTheme {
   base: string;
+  color: FlowbiteColors;
 }
 
-export interface CheckboxProps extends Omit<ComponentProps<'input'>, 'type' | 'ref'> {
+export interface CheckboxProps extends Omit<ComponentProps<'input'>, 'type' | 'ref' | 'color'> {
   theme?: DeepPartial<FlowbiteCheckboxTheme>;
+  color?: keyof FlowbiteColors;
 }
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ className, theme: customTheme = {}, ...props }, ref) => {
-    const theme = mergeDeep(useTheme().theme.checkbox, customTheme);
+  ({ className, color = 'default', theme: customTheme = {}, ...props }, ref) => {
+    const theme = mergeDeep(getTheme().checkbox, customTheme);
 
-    return <input ref={ref} type="checkbox" className={twMerge(theme.root.base, className)} {...props} />;
+    return (
+      <input
+        ref={ref}
+        type="checkbox"
+        className={twMerge(theme.root.base, theme.root.color[color], className)}
+        {...props}
+      />
+    );
   },
 );
 

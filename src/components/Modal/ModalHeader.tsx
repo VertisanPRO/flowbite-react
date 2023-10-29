@@ -1,3 +1,5 @@
+'use client';
+
 import { nanoid } from 'nanoid';
 import React, {
   useLayoutEffect,
@@ -9,9 +11,9 @@ import React, {
 } from 'react';
 import { HiOutlineX } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
-import type { DeepPartial } from '../../';
-import { useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
+import { getTheme } from '../../theme-store';
+import type { DeepPartial } from '../../types';
 import { useModalContext } from './ModalContext';
 
 export interface FlowbiteModalHeaderTheme {
@@ -39,7 +41,7 @@ export const ModalHeader: FC<ModalHeaderProps> = ({
 }) => {
   const innerHeaderId = useMemo(() => nanoid(), []);
   const headerId = id || innerHeaderId;
-  const theme = mergeDeep(useTheme().theme.modal.header, customTheme);
+  const theme = mergeDeep(getTheme().modal.header, customTheme);
   const { popup, onClose, setHeaderId } = useModalContext();
 
   useLayoutEffect(() => {

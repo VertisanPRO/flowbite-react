@@ -1,8 +1,9 @@
 import type { FC } from 'react';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
-import { useTheme, type DeepPartial } from '../..';
 import { mergeDeep } from '../../../helpers/merge-deep';
+import { getTheme } from '../../../theme-store';
+import type { DeepPartial } from '../../../types';
 import { useDatePickerContext } from '../DatepickerContext';
 import { addDays, getFirstDayOfTheMonth, getFormattedDate, getWeekDays, isDateEqual, isDateInRange } from '../helpers';
 
@@ -26,7 +27,7 @@ export interface DatepickerViewsDaysProps {
 }
 
 export const DatepickerViewsDays: FC<DatepickerViewsDaysProps> = ({ theme: customTheme = {} }) => {
-  const theme = mergeDeep(useTheme().theme.datepicker.views.days, customTheme);
+  const theme = mergeDeep(getTheme().datepicker.views.days, customTheme);
 
   const { weekStart, minDate, maxDate, viewDate, selectedDate, changeSelectedDate, language } = useDatePickerContext();
 

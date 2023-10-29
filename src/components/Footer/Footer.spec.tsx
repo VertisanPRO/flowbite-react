@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import React from 'react';
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
 import { describe, expect, it } from 'vitest';
-import { Flowbite } from '../../';
+import { Flowbite } from '../Flowbite';
 import { Footer } from './Footer';
 
 describe('Components / Footer', () => {

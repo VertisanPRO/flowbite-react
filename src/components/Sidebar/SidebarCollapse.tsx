@@ -1,11 +1,15 @@
+'use client';
+
 import { nanoid } from 'nanoid';
 import type { ComponentProps, FC, PropsWithChildren, ReactElement } from 'react';
 import React, { useEffect, useMemo, useState } from 'react';
 import { HiChevronDown } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
-import type { DeepPartial, FlowbiteBoolean } from '../../';
-import { Tooltip, useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
+import { getTheme } from '../../theme-store';
+import type { DeepPartial } from '../../types';
+import type { FlowbiteBoolean } from '../Flowbite';
+import { Tooltip } from '../Tooltip';
 import { useSidebarContext } from './SidebarContext';
 import type { SidebarItemProps } from './SidebarItem';
 import { SidebarItemContext } from './SidebarItemContext';
@@ -51,7 +55,7 @@ export const SidebarCollapse: FC<SidebarCollapseProps> = ({
   const id = useMemo(() => nanoid(), []);
   const { isCollapsed } = useSidebarContext();
   const [isOpen, setOpen] = useState(open);
-  const theme = mergeDeep(useTheme().theme.sidebar.collapse, customTheme);
+  const theme = mergeDeep(getTheme().sidebar.collapse, customTheme);
 
   useEffect(() => setOpen(open), [open]);
 

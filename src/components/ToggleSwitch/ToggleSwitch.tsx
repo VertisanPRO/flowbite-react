@@ -2,9 +2,11 @@ import { nanoid } from 'nanoid';
 import type { ComponentProps, FC, KeyboardEvent } from 'react';
 import React, { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
-import type { DeepPartial, FlowbiteBoolean, FlowbiteColors, FlowbiteTextInputSizes } from '../../';
-import { useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
+import { getTheme } from '../../theme-store';
+import type { DeepPartial } from '../../types';
+import type { FlowbiteBoolean, FlowbiteColors } from '../Flowbite';
+import type { FlowbiteTextInputSizes } from '../TextInput';
 
 export interface FlowbiteToggleSwitchTheme {
   root: FlowbiteToggleSwitchRootTheme;
@@ -47,7 +49,7 @@ export const ToggleSwitch: FC<ToggleSwitchProps> = ({
   ...props
 }) => {
   const id = useMemo(() => nanoid(), []);
-  const theme = mergeDeep(useTheme().theme.toggleSwitch, customTheme);
+  const theme = mergeDeep(getTheme().toggleSwitch, customTheme);
 
   const toggle = (): void => onChange(!checked);
 

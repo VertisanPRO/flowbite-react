@@ -1,9 +1,10 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
-import type { DeepPartial, FlowbiteColors } from '../../';
-import { useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
+import { getTheme } from '../../theme-store';
+import type { DeepPartial } from '../../types';
+import type { FlowbiteColors } from '../Flowbite';
 
 export interface FlowbiteHelperTextTheme {
   root: FlowbiteHelperTextRootTheme;
@@ -32,7 +33,7 @@ export const HelperText: FC<HelperTextProps> = ({
   value,
   ...props
 }) => {
-  const theme = mergeDeep(useTheme().theme.helperText, customTheme);
+  const theme = mergeDeep(getTheme().helperText, customTheme);
 
   return (
     <p className={twMerge(theme.root.base, theme.root.colors[color], className)} {...props}>

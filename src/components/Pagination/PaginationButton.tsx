@@ -1,9 +1,9 @@
 import type { ComponentProps, FC, ReactEventHandler, ReactNode } from 'react';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
-import type { DeepPartial } from '../../';
-import { useTheme } from '../../';
 import { mergeDeep } from '../../helpers/merge-deep';
+import { getTheme } from '../../theme-store';
+import type { DeepPartial } from '../../types';
 
 export interface FlowbitePaginationButtonTheme {
   base: string;
@@ -31,7 +31,7 @@ export const PaginationButton: FC<PaginationButtonProps> = ({
   theme: customTheme = {},
   ...props
 }) => {
-  const theme = mergeDeep(useTheme().theme.pagination, customTheme);
+  const theme = mergeDeep(getTheme().pagination, customTheme);
 
   return (
     <button
@@ -55,7 +55,7 @@ export const PaginationNavigation: FC<PaginationPrevButtonProps> = ({
   disabled = false,
   ...props
 }) => {
-  const theme = mergeDeep(useTheme().theme.pagination, customTheme);
+  const theme = mergeDeep(getTheme().pagination, customTheme);
 
   return (
     <button

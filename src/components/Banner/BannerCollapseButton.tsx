@@ -1,3 +1,5 @@
+'use client';
+
 import type { FC, MouseEventHandler } from 'react';
 import React from 'react';
 import type { ButtonProps } from '../Button';

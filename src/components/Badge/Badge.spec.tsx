@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import React from 'react';
 import { HiCheck } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';
-import { Flowbite } from '../../';
+import { Flowbite } from '../Flowbite';
 import { Badge } from './Badge';
 
 describe('Components / Badge', () => {
