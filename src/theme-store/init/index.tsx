@@ -1,3 +1,4 @@
+import React from 'react';
 import type { CustomFlowbiteTheme } from '../../components/Flowbite';
 import type { ThemeMode } from '../../helpers/use-theme-mode';
 import { ThemeClientInit } from './client';
