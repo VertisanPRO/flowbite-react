@@ -6,7 +6,7 @@ import { FloatingLabel } from './FloatingLabel';
 describe('Components / Floating Label', () => {
   describe('Floating Label properties', () => {
     it('should have `role="textbox"` by default', () => {
-    const textInput = render(<FloatingLabel variant={'filled'} label={'Label'} />).getByRole('textbox');
+      const textInput = render(<FloatingLabel variant={'filled'} label={'Label'} />).getByRole('textbox');
       expect(textInput).toBeInTheDocument();
     });
 
