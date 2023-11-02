@@ -18,7 +18,7 @@ import React, { cloneElement, useCallback, useEffect, useMemo, useRef, useState 
 import { HiOutlineChevronDown, HiOutlineChevronLeft, HiOutlineChevronRight, HiOutlineChevronUp } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
-import { useBaseFLoating, useFloatingInteractions } from '../../helpers/use-floating';
+import { useBaseFLoating, useFloatingInteractions } from '../../hooks/use-floating';
 import { getTheme } from '../../theme-store';
 import type { DeepPartial } from '../../types';
 import { Button, type ButtonProps } from '../Button';

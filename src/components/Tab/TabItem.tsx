@@ -1,3 +1,5 @@
+'use client';
+
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react';
 import React from 'react';
 

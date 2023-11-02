@@ -37,7 +37,7 @@ export interface SidebarCollapseProps
   onClick?: ComponentProps<'button'>['onClick'];
   open?: boolean;
   chevronIcon?: FC<ComponentProps<'svg'>>;
-  renderChevronIcon?: (theme: DeepPartial<FlowbiteSidebarCollapseTheme>, open: boolean) => ReactElement;
+  renderChevronIcon?: (theme: FlowbiteSidebarCollapseTheme, open: boolean) => ReactElement;
   theme?: DeepPartial<FlowbiteSidebarCollapseTheme>;
 }
 
