@@ -1,6 +1,6 @@
 {
   "name": "@vertisanpro/flowbite-react",
-  "version": "0.7.0-beta.5-vertisan.1",
+  "version": "0.7.0-beta.5-vertisan.2",
   "description": "Non-Official React components built for Flowbite and Tailwind CSS",
   "keywords": [
     "design-system",
@@ -39,8 +39,8 @@
   "dependencies": {
     "@floating-ui/react": "^0.26.2",
     "contentlayer": "^0.3.4",
-    "nanoid": "^4.0.2",
     "flowbite": "^2.0.0",
+    "nanoid": "^4.0.2",
     "react-icons": "^4.11.0",
     "react-indiana-drag-scroll": "^2.2.0",
     "sharp": "^0.32.6",
