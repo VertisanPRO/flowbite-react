@@ -1,4 +1,4 @@
-import type { ComponentProps, FC, PropsWithChildren } from 'react';
+import type { ComponentProps, FC } from 'react';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
@@ -24,7 +24,7 @@ export interface FlowbiteCardImageTheme {
   horizontal: FlowbiteBoolean;
 }
 
-interface CommonCardProps extends PropsWithChildren<ComponentProps<'div'>> {
+interface CommonCardProps extends ComponentProps<'div'> {
   horizontal?: boolean;
   href?: string;
   /** Overwrites the theme. Will be merged with the context theme.
@@ -33,18 +33,17 @@ interface CommonCardProps extends PropsWithChildren<ComponentProps<'div'>> {
   theme?: DeepPartial<FlowbiteCardTheme>;
 }
 
-export type CardProps =
-  | (
-      | { imgAlt?: string; imgSrc?: string; renderImage?: never }
-      | {
-          /** Allows to provide a custom render function for the image component. Useful in Next.JS and Gatsby. **Setting this will disable `imgSrc` and `imgAlt`**.
-           */
-          renderImage?: (theme: DeepPartial<FlowbiteCardTheme>, horizontal: boolean) => JSX.Element;
-          imgAlt?: never;
-          imgSrc?: never;
-        }
-    ) &
-      CommonCardProps;
+export type CardProps = (
+  | { imgAlt?: string; imgSrc?: string; renderImage?: never }
+  | {
+      /** Allows to provide a custom render function for the image component. Useful in Next.JS and Gatsby. **Setting this will disable `imgSrc` and `imgAlt`**.
+       */
+      renderImage?: (theme: DeepPartial<FlowbiteCardTheme>, horizontal: boolean) => JSX.Element;
+      imgAlt?: never;
+      imgSrc?: never;
+    }
+) &
+  CommonCardProps;
 
 export const Card: FC<CardProps> = (props) => {
   const { children, className, horizontal, href, theme: customTheme = {} } = props;

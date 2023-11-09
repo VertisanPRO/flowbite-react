@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import React from 'react';
 import { HiHome } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';
-import { Flowbite } from '../Flowbite';
+import { Flowbite, type CustomFlowbiteTheme } from '../Flowbite';
 import { Breadcrumb } from './Breadcrumb';
 
 describe('Components / Breadcrumb', () => {
@@ -41,7 +41,7 @@ describe('Components / Breadcrumb', () => {
   });
 
   it('should use custom list classes via theme={}', () => {
-    const theme = {
+    const theme: CustomFlowbiteTheme = {
       breadcrumb: {
         root: {
           list: 'gap-6',
@@ -58,7 +58,7 @@ describe('Components / Breadcrumb', () => {
   });
 
   it('should use custom item classes via theme={}', () => {
-    const theme = {
+    const theme: CustomFlowbiteTheme = {
       breadcrumb: {
         item: {
           base: 'justify-center',

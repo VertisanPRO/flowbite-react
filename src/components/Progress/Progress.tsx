@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-import type { ComponentProps, FC, PropsWithChildren } from 'react';
+import type { ComponentProps, FC } from 'react';
 import React, { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
@@ -24,7 +24,7 @@ export interface ProgressSizes extends Pick<FlowbiteSizes, 'sm' | 'md' | 'lg' | 
   [key: string]: string;
 }
 
-export interface ProgressProps extends PropsWithChildren<unknown>, ComponentProps<'div'> {
+export interface ProgressProps extends ComponentProps<'div'> {
   labelProgress?: boolean;
   labelText?: boolean;
   progress: number;

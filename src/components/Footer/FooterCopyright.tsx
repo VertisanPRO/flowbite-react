@@ -1,4 +1,4 @@
-import type { ComponentProps, FC, PropsWithChildren } from 'react';
+import type { ComponentProps, FC } from 'react';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
@@ -11,7 +11,7 @@ export interface FlowbiteFooterCopyrightTheme {
   span: string;
 }
 
-export interface CopyrightProps extends PropsWithChildren<unknown>, ComponentProps<'div'> {
+export interface CopyrightProps extends ComponentProps<'div'> {
   by: string;
   href?: string;
   theme?: DeepPartial<FlowbiteFooterCopyrightTheme>;

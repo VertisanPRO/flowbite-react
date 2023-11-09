@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { describe, expect, it, vi } from 'vitest';
 import { theme } from '../../theme';
-import { Flowbite } from '../Flowbite';
+import { Flowbite, type CustomFlowbiteTheme } from '../Flowbite';
 import { Button } from './Button';
 
 describe('Components / Button group', () => {
@@ -93,7 +93,7 @@ describe('Components / Button group', () => {
 
   describe('Theme', () => {
     it('should use `base` classes', () => {
-      const theme = {
+      const theme: CustomFlowbiteTheme = {
         buttonGroup: {
           base: 'text-gray-400',
         },
@@ -113,7 +113,7 @@ describe('Components / Button group', () => {
     });
 
     it('should use `position` classes', () => {
-      const theme = {
+      const theme: CustomFlowbiteTheme = {
         buttonGroup: {
           base: 'text-gray-400',
         },

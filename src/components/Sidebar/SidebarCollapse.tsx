@@ -6,7 +6,6 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { HiChevronDown } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
-import { getTheme } from '../../theme-store';
 import type { DeepPartial } from '../../types';
 import type { FlowbiteBoolean } from '../Flowbite';
 import { Tooltip } from '../Tooltip';
@@ -31,8 +30,7 @@ export interface FlowbiteSidebarCollapseTheme {
 }
 
 export interface SidebarCollapseProps
-  extends PropsWithChildren<unknown>,
-    Pick<SidebarItemProps, 'active' | 'as' | 'href' | 'icon' | 'label' | 'labelColor'>,
+  extends Pick<SidebarItemProps, 'active' | 'as' | 'href' | 'icon' | 'label' | 'labelColor'>,
     ComponentProps<'button'> {
   onClick?: ComponentProps<'button'>['onClick'];
   open?: boolean;
@@ -53,9 +51,10 @@ export const SidebarCollapse: FC<SidebarCollapseProps> = ({
   ...props
 }) => {
   const id = useMemo(() => nanoid(), []);
-  const { isCollapsed } = useSidebarContext();
   const [isOpen, setOpen] = useState(open);
-  const theme = mergeDeep(getTheme().sidebar.collapse, customTheme);
+  const { theme: rootTheme, isCollapsed } = useSidebarContext();
+
+  const theme = mergeDeep(rootTheme.collapse, customTheme);
 
   useEffect(() => setOpen(open), [open]);
 

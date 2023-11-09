@@ -1,4 +1,4 @@
-import type { ComponentProps, FC, PropsWithChildren } from 'react';
+import type { ComponentProps, FC } from 'react';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
@@ -26,7 +26,7 @@ export interface BadgeSizes extends Pick<FlowbiteSizes, 'xs' | 'sm'> {
   [key: string]: string;
 }
 
-export interface BadgeProps extends PropsWithChildren<Omit<ComponentProps<'span'>, 'color'>> {
+export interface BadgeProps extends Omit<ComponentProps<'span'>, 'color'> {
   color?: keyof FlowbiteColors;
   href?: string;
   icon?: FC<ComponentProps<'svg'>>;

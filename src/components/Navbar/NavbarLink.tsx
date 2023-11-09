@@ -1,10 +1,12 @@
-import type { ComponentProps, ElementType, FC, PropsWithChildren } from 'react';
+'use client';
+
+import type { ComponentProps, ElementType, FC } from 'react';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
-import { getTheme } from '../../theme-store';
 import type { DeepPartial } from '../../types';
 import type { FlowbiteBoolean } from '../Flowbite';
+import { useNavbarContext } from './NavbarContext';
 
 export interface FlowbiteNavbarLinkTheme {
   base: string;
@@ -12,7 +14,7 @@ export interface FlowbiteNavbarLinkTheme {
   disabled: FlowbiteBoolean;
 }
 
-export interface NavbarLinkProps extends PropsWithChildren<unknown>, ComponentProps<'a'>, Record<string, unknown> {
+export interface NavbarLinkProps extends ComponentProps<'a'>, Record<string, unknown> {
   active?: boolean;
   as?: ElementType;
   disabled?: boolean;
@@ -29,7 +31,9 @@ export const NavbarLink: FC<NavbarLinkProps> = ({
   theme: customTheme = {},
   ...props
 }) => {
-  const theme = mergeDeep(getTheme().navbar.link, customTheme);
+  const { theme: rootTheme } = useNavbarContext();
+
+  const theme = mergeDeep(rootTheme.link, customTheme);
 
   return (
     <li>

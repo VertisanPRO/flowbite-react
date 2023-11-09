@@ -1,4 +1,4 @@
-import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react';
+import type { ComponentProps, FC, ReactNode } from 'react';
 import React from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
@@ -39,7 +39,7 @@ export interface FlowbitePaginationNavigationTheme {
   icon: string;
 }
 
-export interface PaginationProps extends PropsWithChildren<unknown>, ComponentProps<'nav'> {
+export interface PaginationProps extends ComponentProps<'nav'> {
   currentPage: number;
   layout?: 'navigation' | 'pagination' | 'table';
   nextLabel?: string;
@@ -124,6 +124,7 @@ const PaginationComponent: FC<PaginationProps> = ({
 };
 
 PaginationComponent.displayName = 'Pagination';
+
 export const Pagination = Object.assign(PaginationComponent, {
   Button: PaginationButton,
 });

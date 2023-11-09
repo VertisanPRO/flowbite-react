@@ -2,7 +2,6 @@ import type { FC } from 'react';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../../helpers/merge-deep';
-import { getTheme } from '../../../theme-store';
 import { useDatePickerContext } from '../DatepickerContext';
 import { Views, getFormattedDate, isDateEqual, isDateInRange } from '../helpers';
 
@@ -22,9 +21,18 @@ export interface DatepickerViewsMonthsProps {
 }
 
 export const DatepickerViewsMonth: FC<DatepickerViewsMonthsProps> = ({ theme: customTheme = {} }) => {
-  const theme = mergeDeep(getTheme().datepicker.views.months, customTheme);
+  const {
+    theme: rootTheme,
+    minDate,
+    maxDate,
+    selectedDate,
+    viewDate,
+    language,
+    setViewDate,
+    setView,
+  } = useDatePickerContext();
 
-  const { minDate, maxDate, selectedDate, viewDate, language, setViewDate, setView } = useDatePickerContext();
+  const theme = mergeDeep(rootTheme.views.months, customTheme);
 
   return (
     <div className={theme.items.base}>

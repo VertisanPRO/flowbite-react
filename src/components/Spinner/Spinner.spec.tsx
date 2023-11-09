@@ -2,7 +2,7 @@ import type { RenderResult } from '@testing-library/react';
 import { render } from '@testing-library/react';
 import React from 'react';
 import { describe, expect, it } from 'vitest';
-import { Flowbite } from '../Flowbite';
+import { Flowbite, type CustomFlowbiteTheme } from '../Flowbite';
 import { Spinner } from './Spinner';
 
 describe('Components / Spinner', () => {
@@ -24,7 +24,7 @@ describe('Components / Spinner', () => {
 
   describe('Theme', () => {
     it('should use `base` classes', () => {
-      const theme = {
+      const theme: CustomFlowbiteTheme = {
         spinner: {
           base: 'text-gray-100',
         },
@@ -42,7 +42,7 @@ describe('Components / Spinner', () => {
     });
 
     it('should use `color` classes', () => {
-      const theme = {
+      const theme: CustomFlowbiteTheme = {
         spinner: {
           color: {
             primary: 'text-gray-200',
@@ -62,7 +62,7 @@ describe('Components / Spinner', () => {
     });
 
     it('should use `light` classes', () => {
-      const theme = {
+      const theme: CustomFlowbiteTheme = {
         spinner: {
           light: {
             on: {

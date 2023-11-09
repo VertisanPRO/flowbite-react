@@ -5,7 +5,6 @@ import React from 'react';
 import { HiX } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
-import { getTheme } from '../../theme-store';
 import type { DeepPartial } from '../../types';
 import { useToastContext } from './ToastContext';
 
@@ -28,8 +27,9 @@ export const ToastToggle: FC<ToastToggleProps> = ({
   onDismiss,
   ...props
 }) => {
-  const theme = mergeDeep(getTheme().toast.toggle, customTheme);
-  const { duration, isClosed, isRemoved, setIsClosed, setIsRemoved } = useToastContext();
+  const { theme: rootTheme, duration, isClosed, isRemoved, setIsClosed, setIsRemoved } = useToastContext();
+
+  const theme = mergeDeep(rootTheme.toggle, customTheme);
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
     if (onClick) onClick(e);

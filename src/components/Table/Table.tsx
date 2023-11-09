@@ -1,21 +1,17 @@
 'use client';
 
-import type { ComponentProps, FC, PropsWithChildren } from 'react';
+import type { ComponentProps, FC } from 'react';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { getTheme } from '../../theme-store';
 import type { DeepPartial } from '../../types';
-import type { FlowbiteTableBodyTheme } from './TableBody';
-import { TableBody } from './TableBody';
+import { TableBody, type FlowbiteTableBodyTheme } from './TableBody';
 import { TableCell } from './TableCell';
-import type { TableContextType } from './TableContext';
 import { TableContext } from './TableContext';
-import type { FlowbiteTableHeadTheme } from './TableHead';
-import { TableHead } from './TableHead';
+import { TableHead, type FlowbiteTableHeadTheme } from './TableHead';
 import { TableHeadCell } from './TableHeadCell';
-import type { FlowbiteTableRowTheme } from './TableRow';
-import { TableRow } from './TableRow';
+import { TableRow, type FlowbiteTableRowTheme } from './TableRow';
 
 export interface FlowbiteTableTheme {
   root: FlowbiteTableRootTheme;
@@ -30,15 +26,17 @@ export interface FlowbiteTableRootTheme {
   wrapper: string;
 }
 
-export interface TableProps extends PropsWithChildren<unknown>, ComponentProps<'table'>, TableContextType {
+export interface TableProps extends ComponentProps<'table'> {
+  striped?: boolean;
+  hoverable?: boolean;
   theme?: DeepPartial<FlowbiteTableTheme>;
 }
 
 const TableComponent: FC<TableProps> = ({
   children,
   className,
-  hoverable,
   striped,
+  hoverable,
   theme: customTheme = {},
   ...props
 }) => {
@@ -46,7 +44,7 @@ const TableComponent: FC<TableProps> = ({
 
   return (
     <div data-testid="table-element" className={twMerge(theme.root.wrapper)}>
-      <TableContext.Provider value={{ striped, hoverable }}>
+      <TableContext.Provider value={{ theme, striped, hoverable }}>
         <div className={twMerge(theme.root.shadow, className)}></div>
         <table className={twMerge(theme.root.base, className)} {...props}>
           {children}

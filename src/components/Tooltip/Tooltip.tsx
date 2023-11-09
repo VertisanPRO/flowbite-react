@@ -1,5 +1,6 @@
 import type { Placement } from '@floating-ui/core';
-import React, { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react';
+import type { ComponentProps, FC, ReactNode } from 'react';
+import React from 'react';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { getTheme } from '../../theme-store';
 import type { DeepPartial } from '../../types';
@@ -7,7 +8,7 @@ import { Floating, type FlowbiteFloatingTheme } from '../Floating';
 
 export type FlowbiteTooltipTheme = FlowbiteFloatingTheme;
 
-export interface TooltipProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'content' | 'style'>> {
+export interface TooltipProps extends Omit<ComponentProps<'div'>, 'content' | 'style'> {
   animation?: false | `duration-${number}`;
   arrow?: boolean;
   content: ReactNode;

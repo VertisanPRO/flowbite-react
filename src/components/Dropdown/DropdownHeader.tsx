@@ -1,6 +1,6 @@
 'use client';
 
-import type { ComponentProps, FC, PropsWithChildren } from 'react';
+import type { ComponentProps, FC } from 'react';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import type { DeepPartial } from '../../types';
@@ -11,15 +11,14 @@ export interface FlowbiteDropdownHeaderTheme {
   header: string;
 }
 
-export type DropdownHeaderProps = {
+export interface DropdownHeaderProps extends ComponentProps<'div'> {
   theme?: DeepPartial<FlowbiteDropdownHeaderTheme>;
-} & PropsWithChildren<unknown> &
-  ComponentProps<'div'>;
+}
 
 export const DropdownHeader: FC<DropdownHeaderProps> = ({ children, className, theme: customTheme = {}, ...props }) => {
-  const { theme: dropdownTheme } = useDropdownContext();
+  const { theme: rootTheme } = useDropdownContext();
 
-  const theme = customTheme.header ?? dropdownTheme?.floating?.header;
+  const theme = customTheme.header ?? rootTheme.floating.header;
 
   return (
     <>

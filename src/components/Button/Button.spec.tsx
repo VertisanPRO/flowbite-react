@@ -5,7 +5,7 @@ import type { PropsWithChildren } from 'react';
 import React from 'react';
 import { AiOutlineLoading } from 'react-icons/ai';
 import { describe, expect, it, vi } from 'vitest';
-import { Flowbite } from '../Flowbite';
+import { Flowbite, type CustomFlowbiteTheme } from '../Flowbite';
 import { Button } from './Button';
 
 describe('Components / Button', () => {
@@ -184,7 +184,7 @@ describe('Components / Button', () => {
 
   describe('Theme', () => {
     it('should use `base` classes', () => {
-      const theme = {
+      const theme: CustomFlowbiteTheme = {
         button: {
           base: 'font-extralight',
         },
@@ -200,7 +200,7 @@ describe('Components / Button', () => {
     });
 
     it('should use `color` classes', () => {
-      const theme = {
+      const theme: CustomFlowbiteTheme = {
         button: {
           color: {
             primary: 'bg-red-300',
@@ -218,7 +218,7 @@ describe('Components / Button', () => {
     });
 
     it('should use `disabled` classes', () => {
-      const theme = {
+      const theme: CustomFlowbiteTheme = {
         button: {
           disabled: 'opacity-10',
         },
@@ -234,7 +234,7 @@ describe('Components / Button', () => {
     });
 
     it('should use `gradient` classes', () => {
-      const theme = {
+      const theme: CustomFlowbiteTheme = {
         button: {
           gradient: {
             yellowToPink: 'font-extralight',
@@ -252,7 +252,7 @@ describe('Components / Button', () => {
     });
 
     it('should use `gradientDuoTone` classes', () => {
-      const theme = {
+      const theme: CustomFlowbiteTheme = {
         button: {
           gradientDuoTone: {
             yellowToPink: 'font-extralight',
@@ -270,7 +270,7 @@ describe('Components / Button', () => {
     });
 
     it('should use `inner` classes', () => {
-      const theme = {
+      const theme: CustomFlowbiteTheme = {
         button: {
           inner: {
             base: 'font-extralight',
@@ -290,7 +290,7 @@ describe('Components / Button', () => {
     });
 
     it('should use `label` classes', () => {
-      const theme = {
+      const theme: CustomFlowbiteTheme = {
         button: {
           label: 'font-extralight',
         },
@@ -308,7 +308,7 @@ describe('Components / Button', () => {
     });
 
     it('should use `outline` classes', () => {
-      const theme = {
+      const theme: CustomFlowbiteTheme = {
         button: {
           outline: {
             off: 'font-extralight',
@@ -341,7 +341,7 @@ describe('Components / Button', () => {
     });
 
     it('should use `pill` classes', () => {
-      const theme = {
+      const theme: CustomFlowbiteTheme = {
         button: {
           pill: {
             off: 'font-extralight',
@@ -365,7 +365,7 @@ describe('Components / Button', () => {
     });
 
     it('should use `size` classes', () => {
-      const theme = {
+      const theme: CustomFlowbiteTheme = {
         button: {
           size: {
             xxl: 'font-extrabold',

@@ -1,4 +1,4 @@
-import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react';
+import type { ComponentProps, FC, ReactNode } from 'react';
 import React, { forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
@@ -35,7 +35,7 @@ export interface SelectSizes extends Pick<FlowbiteSizes, 'sm' | 'md' | 'lg'> {
   [key: string]: string;
 }
 
-export interface SelectProps extends PropsWithChildren<unknown>, Omit<ComponentProps<'select'>, 'color' | 'ref'> {
+export interface SelectProps extends Omit<ComponentProps<'select'>, 'color' | 'ref'> {
   addon?: ReactNode;
   color?: keyof SelectColors;
   helperText?: ReactNode;

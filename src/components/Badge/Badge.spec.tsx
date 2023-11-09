@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import React from 'react';
 import { HiCheck } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';
-import { Flowbite } from '../Flowbite';
+import { Flowbite, type CustomFlowbiteTheme } from '../Flowbite';
 import { Badge } from './Badge';
 
 describe('Components / Badge', () => {
@@ -31,7 +31,7 @@ describe('Components / Badge', () => {
 
   describe('Theme', () => {
     it('should use custom colors', () => {
-      const theme = {
+      const theme: CustomFlowbiteTheme = {
         badge: {
           root: {
             color: {
@@ -55,7 +55,7 @@ describe('Components / Badge', () => {
     });
 
     it('should use custom sizes', () => {
-      const theme = {
+      const theme: CustomFlowbiteTheme = {
         badge: {
           root: {
             size: {

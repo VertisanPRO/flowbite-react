@@ -37,4 +37,7 @@ const BreadcrumbComponent: FC<BreadcrumbComponentProps> = ({
 };
 
 BreadcrumbComponent.displayName = 'Breadcrumb';
-export const Breadcrumb = Object.assign(BreadcrumbComponent, { Item: BreadcrumbItem });
+
+export const Breadcrumb = Object.assign(BreadcrumbComponent, {
+  Item: BreadcrumbItem,
+});
