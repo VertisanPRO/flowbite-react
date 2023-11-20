@@ -4,7 +4,6 @@ CHANGELOG.md
 # Ignore the same files from .gitignore as well
 .vercel
 build
-coverage
 lib
 node_modules
 .DS_Store
