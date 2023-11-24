@@ -7,8 +7,8 @@
     "incremental": true,
     "isolatedModules": true,
     "jsx": "react",
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
-    "module": "ES2022",
+    "lib": ["DOM", "DOM.Iterable", "ES2015"],
+    "module": "ES2020",
     "moduleResolution": "node",
     "noEmit": false,
     "noImplicitAny": true,
@@ -19,15 +19,10 @@
       "~/*": ["./*"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ESNext",
+    "target": "ES2015",
     "types": ["@testing-library/jest-dom", "node", "vitest"]
   },
   "exclude": ["./build/", "./lib/", "./postcss.config.js"],
