@@ -8,4 +8,3 @@ tsconfig.tsbuildinfo
 yarn-debug.log*
 yarn-error.log*
 dist
-.contentlayer
