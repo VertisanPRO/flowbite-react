@@ -2,6 +2,7 @@
 
 import type { ComponentProps, FC } from 'react';
 import React from 'react';
+import type { IconBaseProps } from 'react-icons';
 import { HiMoon, HiSun } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
@@ -19,8 +20,8 @@ export interface FlowbiteDarkThemeToggleRootTheme {
 }
 
 export interface DarkThemeToggleProps extends ComponentProps<'button'> {
-  iconDark?: string;
-  iconLight?: string;
+  iconDark?: FC<IconBaseProps>;
+  iconLight?: FC<IconBaseProps>;
   theme?: DeepPartial<FlowbiteDarkThemeToggleTheme>;
 }
 
