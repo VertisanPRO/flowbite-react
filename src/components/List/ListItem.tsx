@@ -1,4 +1,5 @@
 import type { FC, PropsWithChildren } from 'react';
+import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { getTheme } from '../../theme-store';
@@ -8,7 +9,7 @@ export interface FlowbiteListItemTheme {
   base: string;
 }
 
-export interface ListItemProps extends PropsWithChildren {
+export interface ListItemProps extends PropsWithChildren<unknown> {
   theme?: DeepPartial<FlowbiteListItemTheme>;
   className?: string;
 }
