@@ -1,15 +1,13 @@
 {
   "compilerOptions": {
-    "allowJs": true,
     "baseUrl": ".",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "incremental": true,
     "isolatedModules": true,
     "jsx": "react",
-    "lib": ["DOM", "DOM.Iterable", "ES2015"],
-    "module": "node16",
-    "moduleResolution": "node16",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "noEmit": false,
     "noImplicitAny": true,
     "noImplicitThis": true,
@@ -21,9 +19,9 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES2015",
+    "target": "ESNext",
     "types": ["@testing-library/jest-dom", "node", "vitest"]
   },
   "exclude": ["./build/", "./lib/", "./postcss.config.js"],
-  "include": ["**/*.js", "**/*.mjs", "**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "vitest.config.mts"]
 }

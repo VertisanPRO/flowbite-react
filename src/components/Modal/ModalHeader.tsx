@@ -1,9 +1,9 @@
 'use client';
 
+import { nanoid } from 'nanoid';
 import React, { useLayoutEffect, useMemo, type ComponentProps, type ElementType, type FC } from 'react';
 import { HiOutlineX } from 'react-icons/hi';
-import { twMerge } from 'tailwind-merge/es5';
-import { ulid } from 'ulid';
+import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
 import type { DeepPartial } from '../../types';
 import { useModalContext } from './ModalContext';
@@ -31,7 +31,7 @@ export const ModalHeader: FC<ModalHeaderProps> = ({
   id,
   ...props
 }) => {
-  const innerHeaderId = useMemo(() => ulid(), []);
+  const innerHeaderId = useMemo(() => nanoid(), []);
   const headerId = id || innerHeaderId;
 
   const { theme: rootTheme, popup, onClose, setHeaderId } = useModalContext();

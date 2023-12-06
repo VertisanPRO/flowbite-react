@@ -16,7 +16,8 @@
   "files": [
     "./lib/"
   ],
-  "main": "./lib/cjs/index.js",
+  "type": "module",
+  "main": "./lib/esm/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
   "repository": {
@@ -24,10 +25,7 @@
     "url": "https://github.com/VertisanPRO/flowbite-react"
   },
   "scripts": {
-    "build": "rm -rf ./lib/ && yarn build:esm && yarn build:cjs",
-    "build:cjs": "tsc -p tsconfig.lib.json",
-    "build:esm": "tsc -p tsconfig.lib.json --module node16 --declaration --outDir ./lib/esm",
-    "commit": "cz",
+    "build": "rm -rf ./lib/ && tsc -p tsconfig.lib.json --module NodeNext --declaration --outDir ./lib/esm",
     "lint": "eslint --color .",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
@@ -38,10 +36,10 @@
   "dependencies": {
     "@floating-ui/react": "^0.26.2",
     "flowbite": "^2.0.0",
+    "nanoid": "^5.0.4",
     "react-icons": "^4.11.0",
     "react-indiana-drag-scroll": "^2.2.0",
-    "tailwind-merge": "^2.1.0",
-    "ulid": "^2.3.0"
+    "tailwind-merge": "^2.1.0"
   },
   "devDependencies": {
     "@testing-library/dom": "^9.3.1",

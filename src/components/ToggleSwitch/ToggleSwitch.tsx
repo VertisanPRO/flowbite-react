@@ -1,7 +1,7 @@
+import { nanoid } from 'nanoid';
 import type { ComponentProps, FC, KeyboardEvent } from 'react';
 import React, { useMemo } from 'react';
-import { twMerge } from 'tailwind-merge/es5';
-import { ulid } from 'ulid';
+import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { getTheme } from '../../theme-store';
 import type { DeepPartial } from '../../types';
@@ -48,7 +48,7 @@ export const ToggleSwitch: FC<ToggleSwitchProps> = ({
   theme: customTheme = {},
   ...props
 }) => {
-  const id = useMemo(() => ulid(), []);
+  const id = useMemo(() => nanoid(), []);
   const theme = mergeDeep(getTheme().toggleSwitch, customTheme);
 
   const toggle = (): void => onChange(!checked);

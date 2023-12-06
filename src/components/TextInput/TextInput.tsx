@@ -1,6 +1,6 @@
 import type { ComponentProps, FC, ReactNode } from 'react';
 import React, { forwardRef } from 'react';
-import { twMerge } from 'tailwind-merge/es5';
+import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { getTheme } from '../../theme-store';
 import type { DeepPartial } from '../../types';

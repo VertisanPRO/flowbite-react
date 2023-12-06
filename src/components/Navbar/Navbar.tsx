@@ -2,7 +2,7 @@
 
 import type { ComponentProps, FC } from 'react';
 import React, { useState } from 'react';
-import { twMerge } from 'tailwind-merge/es5';
+import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { getTheme } from '../../theme-store';
 import type { DeepPartial } from '../../types';

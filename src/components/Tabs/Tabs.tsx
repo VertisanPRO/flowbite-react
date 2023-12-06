@@ -1,9 +1,9 @@
 'use client';
 
+import { nanoid } from 'nanoid';
 import type { ComponentProps, ForwardedRef, KeyboardEvent, PropsWithChildren, ReactElement } from 'react';
 import React, { Children, forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
-import { twMerge } from 'tailwind-merge/es5';
-import { ulid } from 'ulid';
+import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { getTheme } from '../../theme-store';
 import type { DeepPartial } from '../../types';
@@ -72,7 +72,7 @@ const TabsComponent = forwardRef<TabsRef, TabsProps>(
   ) => {
     const theme = mergeDeep(getTheme().tabs, customTheme);
 
-    const id = useMemo(() => ulid(), []);
+    const id = useMemo(() => nanoid(), []);
     const tabs = useMemo(
       () =>
         Children.map(
