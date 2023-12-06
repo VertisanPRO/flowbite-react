@@ -1,7 +1,7 @@
-import { nanoid } from 'nanoid';
 import type { ComponentPropsWithoutRef } from 'react';
 import React, { forwardRef, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge/es5';
+import { ulid } from 'ulid';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { getTheme } from '../../theme-store';
 import type { DeepPartial } from '../../types';
@@ -36,7 +36,7 @@ export const FloatingLabel = forwardRef<HTMLInputElement, FloatingLabelProps>(
     },
     ref,
   ) => {
-    const randomId = useMemo(() => nanoid(), []);
+    const randomId = useMemo(() => ulid(), []);
     const theme = mergeDeep(getTheme().floatingLabel, customTheme);
 
     return (

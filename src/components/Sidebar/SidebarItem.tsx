@@ -1,9 +1,9 @@
 'use client';
 
-import { nanoid } from 'nanoid';
 import type { ComponentProps, ElementType, FC, PropsWithChildren, ReactNode } from 'react';
 import React, { forwardRef, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge/es5';
+import { ulid } from 'ulid';
 import { mergeDeep } from '../../helpers/merge-deep';
 import type { DeepPartial } from '../../types';
 import { Badge } from '../Badge';
@@ -98,7 +98,7 @@ export const SidebarItem = forwardRef<Element, SidebarItemProps>(
     },
     ref,
   ) => {
-    const id = useMemo(() => nanoid(), []);
+    const id = useMemo(() => ulid(), []);
     const { theme: rootTheme, isCollapsed } = useSidebarContext();
     const { isInsideCollapse } = useSidebarItemContext();
 

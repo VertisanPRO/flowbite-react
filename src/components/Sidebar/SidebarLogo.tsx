@@ -1,9 +1,9 @@
 'use client';
 
-import { nanoid } from 'nanoid';
 import type { ComponentProps, FC } from 'react';
 import React, { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge/es5';
+import { ulid } from 'ulid';
 import { mergeDeep } from '../../helpers/merge-deep';
 import type { DeepPartial } from '../../types';
 import type { FlowbiteBoolean } from '../Flowbite';
@@ -31,7 +31,7 @@ export const SidebarLogo: FC<SidebarLogoProps> = ({
   theme: customTheme = {},
   ...props
 }) => {
-  const id = useMemo(() => nanoid(), []);
+  const id = useMemo(() => ulid(), []);
   const { theme: rootTheme, isCollapsed } = useSidebarContext();
 
   const theme = mergeDeep(rootTheme.logo, customTheme);
