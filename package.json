@@ -1,6 +1,6 @@
 {
   "name": "@vertisanpro/flowbite-react",
-  "version": "0.7.0-v5",
+  "version": "0.7.0-v6",
   "description": "Non-Official React components built for Flowbite and Tailwind CSS",
   "keywords": [
     "design-system",
@@ -17,9 +17,9 @@
     "./lib/"
   ],
   "type": "module",
-  "main": "./lib/index.js",
-  "module": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "./lib/src/index.js",
+  "module": "./lib/src/index.js",
+  "types": "./lib/src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/VertisanPRO/flowbite-react"
