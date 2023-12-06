@@ -17,15 +17,15 @@
     "./lib/"
   ],
   "type": "module",
-  "main": "./lib/esm/index.js",
-  "module": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/VertisanPRO/flowbite-react"
   },
   "scripts": {
-    "build": "rm -rf ./lib/ && tsc -p tsconfig.lib.json --module NodeNext --declaration --outDir ./lib/esm",
+    "build": "rm -rf ./lib/ && tsc --declaration --outDir ./lib",
     "lint": "eslint --color .",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
