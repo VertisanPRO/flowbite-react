@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid';
 import type { ComponentProps, FC, PropsWithChildren, ReactElement } from 'react';
 import React, { useEffect, useMemo, useState } from 'react';
 import { HiChevronDown } from 'react-icons/hi';
-import { twMerge } from 'tailwind-merge';
+import { twMerge } from 'tailwind-merge/es5';
 import { mergeDeep } from '../../helpers/merge-deep';
 import type { DeepPartial } from '../../types';
 import type { FlowbiteBoolean } from '../Flowbite';

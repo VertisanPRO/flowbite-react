@@ -3,7 +3,7 @@
 import { nanoid } from 'nanoid';
 import type { ComponentProps, ElementType, FC, PropsWithChildren, ReactNode } from 'react';
 import React, { forwardRef, useMemo } from 'react';
-import { twMerge } from 'tailwind-merge';
+import { twMerge } from 'tailwind-merge/es5';
 import { mergeDeep } from '../../helpers/merge-deep';
 import type { DeepPartial } from '../../types';
 import { Badge } from '../Badge';
