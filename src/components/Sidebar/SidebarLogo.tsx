@@ -1,9 +1,9 @@
 'use client';
 
+import { twMerge } from '@vertisanpro/tailwind-merge';
 import { nanoid } from 'nanoid';
 import type { ComponentProps, FC } from 'react';
 import React, { useMemo } from 'react';
-import { twMerge } from 'tailwind-merge/es5';
 import { mergeDeep } from '../../helpers/merge-deep';
 import type { DeepPartial } from '../../types';
 import type { FlowbiteBoolean } from '../Flowbite';

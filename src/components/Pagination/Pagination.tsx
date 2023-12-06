@@ -1,7 +1,7 @@
+import { twMerge } from '@vertisanpro/tailwind-merge';
 import type { ComponentProps, FC, ReactNode } from 'react';
 import React from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-import { twMerge } from 'tailwind-merge/es5';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { getTheme } from '../../theme-store';
 import type { DeepPartial } from '../../types';

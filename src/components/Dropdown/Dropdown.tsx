@@ -2,6 +2,7 @@
 
 import type { ExtendedRefs } from '@floating-ui/react';
 import { FloatingFocusManager, FloatingList, useListNavigation, useTypeahead } from '@floating-ui/react';
+import { twMerge } from '@vertisanpro/tailwind-merge';
 import type {
   ComponentProps,
   Dispatch,
@@ -15,7 +16,6 @@ import type {
 } from 'react';
 import React, { cloneElement, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { HiOutlineChevronDown, HiOutlineChevronLeft, HiOutlineChevronRight, HiOutlineChevronUp } from 'react-icons/hi';
-import { twMerge } from 'tailwind-merge/es5';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { useBaseFLoating, useFloatingInteractions } from '../../hooks/use-floating';
 import { getTheme } from '../../theme-store';

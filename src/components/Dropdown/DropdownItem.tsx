@@ -1,9 +1,9 @@
 'use client';
 
 import { useListItem } from '@floating-ui/react';
+import { twMerge } from '@vertisanpro/tailwind-merge';
 import type { ComponentProps, ComponentPropsWithoutRef, ElementType, FC, RefCallback } from 'react';
 import React from 'react';
-import { twMerge } from 'tailwind-merge/es5';
 import { mergeDeep } from '../../helpers/merge-deep';
 import type { DeepPartial } from '../../types';
 import { ButtonBase, type ButtonBaseProps } from '../Button/ButtonBase';

@@ -1,6 +1,6 @@
+import { twMerge } from '@vertisanpro/tailwind-merge';
 import type { ComponentPropsWithoutRef, ElementType, ForwardedRef } from 'react';
 import React, { type ReactNode } from 'react';
-import { twMerge } from 'tailwind-merge/es5';
 import genericForwardRef from '../../helpers/generic-forward-ref';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { getTheme } from '../../theme-store';
