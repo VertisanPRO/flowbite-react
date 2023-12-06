@@ -26,7 +26,7 @@
   "scripts": {
     "build": "rm -rf ./lib/ && yarn build:esm && yarn build:cjs",
     "build:cjs": "tsc -p tsconfig.lib.json",
-    "build:esm": "tsc -p tsconfig.lib.json --module es2020 --declaration --outDir ./lib/esm",
+    "build:esm": "tsc -p tsconfig.lib.json --module node16 --declaration --outDir ./lib/esm",
     "commit": "cz",
     "lint": "eslint --color .",
     "prettier": "prettier --check .",

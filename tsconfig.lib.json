@@ -2,7 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "jsx": "react",
-    "module": "CommonJS",
+    "module": "node16",
     "outDir": "./lib/cjs"
   },
   "exclude": ["**/*.spec.tsx"],
