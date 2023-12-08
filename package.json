@@ -1,6 +1,6 @@
 {
   "name": "@vertisanpro/flowbite-react",
-  "version": "0.7.0-v8",
+  "version": "0.7.0-v9",
   "description": "Non-Official React components built for Flowbite and Tailwind CSS",
   "keywords": [
     "design-system",
@@ -118,5 +118,8 @@
       "jsx-a11y/anchor-is-valid": "off",
       "react/no-unescaped-entities": "off"
     }
+  },
+  "publishConfig": {
+    "@vertisanpro:registry": "https://registry.npmjs.org/"
   }
 }
