@@ -1,7 +1,7 @@
 import { cleanup, render, screen } from '@testing-library/react';
+import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from '@vertisanpro/react-icons/bs';
 import type { FC } from 'react';
 import React from 'react';
-import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
 import { describe, expect, it } from 'vitest';
 import { Flowbite, type CustomFlowbiteTheme } from '../Flowbite';
 import { Footer } from './Footer';

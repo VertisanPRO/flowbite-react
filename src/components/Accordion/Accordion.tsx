@@ -1,9 +1,9 @@
 'use client';
 
+import { HiChevronDown } from '@vertisanpro/react-icons/hi';
 import { twMerge } from '@vertisanpro/tailwind-merge';
 import type { ComponentProps, FC, ReactElement } from 'react';
 import React, { Children, cloneElement, useMemo, useState } from 'react';
-import { HiChevronDown } from 'react-icons/hi';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { getTheme } from '../../theme-store';
 import type { DeepPartial } from '../../types';

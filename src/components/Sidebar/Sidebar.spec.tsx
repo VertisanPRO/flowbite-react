@@ -1,8 +1,8 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { HiChartPie, HiInbox, HiShoppingBag } from '@vertisanpro/react-icons/hi';
 import type { FC } from 'react';
 import React from 'react';
-import { HiChartPie, HiInbox, HiShoppingBag } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';
 import { Flowbite, type CustomFlowbiteTheme } from '../Flowbite';
 import type { SidebarProps } from './Sidebar';

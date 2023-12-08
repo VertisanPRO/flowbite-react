@@ -1,8 +1,8 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { HiEye, HiHeart, HiInformationCircle } from '@vertisanpro/react-icons/hi';
 import type { FC } from 'react';
 import React, { useState } from 'react';
-import { HiEye, HiHeart, HiInformationCircle } from 'react-icons/hi';
 import { describe, expect, it, vi } from 'vitest';
 import { Flowbite, type CustomFlowbiteTheme } from '../Flowbite';
 

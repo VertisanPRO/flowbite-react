@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
+import { MdKeyboardArrowLeft, MdKeyboardCommandKey } from '@vertisanpro/react-icons/md';
 import React from 'react';
-import { MdKeyboardArrowLeft, MdKeyboardCommandKey } from 'react-icons/md';
 import { describe, expect, it } from 'vitest';
 import { Flowbite, type CustomFlowbiteTheme } from '../Flowbite';
 import { Kbd } from './Kbd';

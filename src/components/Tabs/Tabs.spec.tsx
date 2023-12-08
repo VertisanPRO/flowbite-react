@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { HiAdjustments, HiClipboardList, HiUserCircle } from '@vertisanpro/react-icons/hi';
+import { MdDashboard } from '@vertisanpro/react-icons/md';
 import type { FC } from 'react';
 import React, { createRef, forwardRef } from 'react';
 import { act } from 'react-dom/test-utils';
-import { HiAdjustments, HiClipboardList, HiUserCircle } from 'react-icons/hi';
-import { MdDashboard } from 'react-icons/md';
 import { describe, expect, it, vi } from 'vitest';
 import type { TabsRef } from './Tabs';
 import { Tabs } from './Tabs';

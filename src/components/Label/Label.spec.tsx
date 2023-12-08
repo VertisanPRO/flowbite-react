@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
+import { HiGlobe, HiLockClosed } from '@vertisanpro/react-icons/hi';
 import React from 'react';
-import { HiGlobe, HiLockClosed } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';
 import { Button } from '../Button';
 import { Checkbox } from '../Checkbox';

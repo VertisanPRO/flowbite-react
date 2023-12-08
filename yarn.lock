@@ -829,6 +829,11 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
+"@vertisanpro/react-icons@^5.1.0-v1":
+  version "5.1.0-v1"
+  resolved "https://npm.pkg.github.com/download/@vertisanpro/react-icons/5.1.0-v1/24060e89dfd8528d298bd1352ffed28144b39cb1#24060e89dfd8528d298bd1352ffed28144b39cb1"
+  integrity sha512-8qJ2Kk3AuGAYC+akWCtQ8heFC0VLYHxjSoaKJLoRhYWNm46H+Zmo03rj2GJGJWUR5+XMmtlBTCSNKgqAYGcHNg==
+
 "@vertisanpro/tailwind-merge@^2.1.0-v1":
   version "2.1.0-v1"
   resolved "https://registry.yarnpkg.com/@vertisanpro/tailwind-merge/-/tailwind-merge-2.1.0-v1.tgz#f15e402efff6425e55ae0ff6c4ae3afc82202599"
@@ -3057,11 +3062,6 @@ react-dom@^16.14.0:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.19.1"
-
-react-icons@^4.11.0:
-  version "4.11.0"
-  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.11.0.tgz#4b0e31c9bfc919608095cc429c4f1846f4d66c65"
-  integrity sha512-V+4khzYcE5EBk/BvcuYRq6V/osf11ODUM2J8hg2FDSswRrGvqiYUYPRy4OdrWaQOBj4NcpJfmHZLNaD+VH0TyA==
 
 react-indiana-drag-scroll@^2.2.0:
   version "2.2.0"

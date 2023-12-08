@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
+import { HiHome } from '@vertisanpro/react-icons/hi';
 import type { FC } from 'react';
 import React from 'react';
-import { HiHome } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';
 import { Flowbite, type CustomFlowbiteTheme } from '../Flowbite';
 import { Breadcrumb } from './Breadcrumb';

@@ -1,9 +1,9 @@
 'use client';
 
+import { HiOutlineChevronLeft, HiOutlineChevronRight } from '@vertisanpro/react-icons/hi';
 import { twMerge } from '@vertisanpro/tailwind-merge';
 import type { ComponentProps, FC, ReactElement, ReactNode } from 'react';
 import React, { Children, cloneElement, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';
 import ScrollContainer from 'react-indiana-drag-scroll';
 import { isClient } from '../../helpers/is-client';
 import { mergeDeep } from '../../helpers/merge-deep';

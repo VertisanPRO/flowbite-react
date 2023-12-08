@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { HiCloudDownload } from '@vertisanpro/react-icons/hi';
 import React, { useState } from 'react';
-import { HiCloudDownload } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';
 import type { CustomFlowbiteTheme } from '../Flowbite';
 import { Flowbite } from '../Flowbite';

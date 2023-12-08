@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { AiOutlineLoading } from '@vertisanpro/react-icons/ai';
 import type { PropsWithChildren } from 'react';
 import React from 'react';
-import { AiOutlineLoading } from 'react-icons/ai';
 import { describe, expect, it, vi } from 'vitest';
 import { Flowbite, type CustomFlowbiteTheme } from '../Flowbite';
 import { Button } from './Button';

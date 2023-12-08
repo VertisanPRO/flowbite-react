@@ -1,9 +1,9 @@
 'use client';
 
+import { HiArrowLeft, HiArrowRight, HiCalendar } from '@vertisanpro/react-icons/hi';
 import { twMerge } from '@vertisanpro/tailwind-merge';
 import type { FC, ReactNode } from 'react';
 import React, { useEffect, useRef, useState } from 'react';
-import { HiArrowLeft, HiArrowRight, HiCalendar } from 'react-icons/hi';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { getTheme } from '../../theme-store';
 import type { DeepPartial } from '../../types';
