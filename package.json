@@ -1,6 +1,6 @@
 {
   "name": "@vertisanpro/flowbite-react",
-  "version": "0.7.0-v10",
+  "version": "0.7.0-v11",
   "description": "Non-Official React components built for Flowbite and Tailwind CSS",
   "keywords": [
     "design-system",
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.2",
-    "@vertisanpro/react-icons": "^5.1.0-v3",
+    "@vertisanpro/react-icons": "^5.1.0-v4",
     "@vertisanpro/tailwind-merge": "^2.1.0-v1",
     "flowbite": "^2.0.0",
     "nanoid": "^4.0.2",
