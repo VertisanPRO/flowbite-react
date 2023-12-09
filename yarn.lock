@@ -829,10 +829,10 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
-"@vertisanpro/react-icons@^5.1.0-v2":
-  version "5.1.0-v2"
-  resolved "https://npm.pkg.github.com/download/@vertisanpro/react-icons/5.1.0-v2/27c96e3d955dc381fe3c27bbc0119231c4487aaa#27c96e3d955dc381fe3c27bbc0119231c4487aaa"
-  integrity sha512-sQHYOutSRBiAhFGrGP2djqPoMP5v+XaiLvNo4//k+cu9mXNiZFNmRa9j/PdIJ5pPUMicDB6Hck2+1Sv9F8uc0A==
+"@vertisanpro/react-icons@^5.1.0-v3":
+  version "5.1.0-v3"
+  resolved "https://registry.yarnpkg.com/@vertisanpro/react-icons/-/react-icons-5.1.0-v3.tgz#2b8d875e57a9aaea779caa7bdd86b2e56784f5a0"
+  integrity sha512-yhr2k4b+fEZbfqFFTXOaJzjD4+/5uevYVNsUfyMwJNivuyS1gfIFfeRZY+QZbpqdcQQXKQSrhBxOqqDNH2zB5A==
 
 "@vertisanpro/tailwind-merge@^2.1.0-v1":
   version "2.1.0-v1"

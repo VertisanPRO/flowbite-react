@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.2",
-    "@vertisanpro/react-icons": "^5.1.0-v2",
+    "@vertisanpro/react-icons": "^5.1.0-v3",
     "@vertisanpro/tailwind-merge": "^2.1.0-v1",
     "flowbite": "^2.0.0",
     "nanoid": "^4.0.2",
@@ -118,8 +118,5 @@
       "jsx-a11y/anchor-is-valid": "off",
       "react/no-unescaped-entities": "off"
     }
-  },
-  "publishConfig": {
-    "@vertisanpro:registry": "https://registry.npmjs.org/"
   }
 }
