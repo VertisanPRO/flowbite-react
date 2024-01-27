@@ -7,7 +7,7 @@ export type ButtonBaseProps<T extends ElementType = 'button'> = {
 } & ComponentPropsWithoutRef<T>;
 
 const ButtonBaseComponent = <T extends ElementType = 'button'>(
-  { children, as: Component, href, type = 'button', ...props }: ButtonBaseProps<T>,
+  { children, as: Component, href, type, ...props }: ButtonBaseProps<T>,
   ref: ForwardedRef<T>,
 ) => {
   const BaseComponent = Component || (href ? 'a' : 'button');
